@@ -24,22 +24,24 @@ float var(float *x, int size) {
 float cov(float *x, float *y, int size) {
     float sum_x = 0;
     float sum_y = 0;
+    float sum_xy = 0;
     float cov;
     for (int i = 0; i < size; ++i) {
         sum_x = sum_x + x[i];
         sum_y = sum_y + y[i];
+        sum_xy = sum_xy + (x[i] * y[i]);
     }
-    cov = (sum_x + sum_y) / (2 * size) - (sum_x / size * sum_y / size);
+    cov = sum_xy / (size) - (sum_x / size * sum_y / size);
     return cov;
 }
 
 float pearson(float *x, float *y, int size) {
-    float person;
+    float pearson;
     float p_cov = cov(x,y,size);
     float alpha_x = sqrtf(var(x,size));
     float alpha_y = sqrtf(var(y,size));
-    person = p_cov / (alpha_x * alpha_y);
-    return person;
+    pearson = p_cov / (alpha_x * alpha_y);
+    return pearson;
 }
 
 Line linear_reg(Point **points, int size) {
