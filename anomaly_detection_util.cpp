@@ -5,7 +5,7 @@
 
 #include "anomaly_detection_util.h"
 #include "cmath"
-
+//This function
 float var(float *x, int size) {
     // calculating Expectation value
     float mu = 0;

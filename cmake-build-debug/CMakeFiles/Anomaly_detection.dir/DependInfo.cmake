@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o"
-  "/home/avi/Desktop/Anomaly-detection/main.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/main.cpp.o"
+  "/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o"
+  "/home/kehat/CLionProjects/Anomaly-detection/main.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
