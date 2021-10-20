@@ -13,7 +13,7 @@ float var(float *x, int size) {
     for (int i = 0; i < size; ++i) {
         mu = mu + x[i];
     }
-    mu = mu / size;
+    mu = mu / (float)size;
 
     for (int i = 0; i < size; ++i) {
         var = var + powf((x[i] - mu),(x[i] - mu));
@@ -31,7 +31,7 @@ float cov(float *x, float *y, int size) {
         sum_y = sum_y + y[i];
         sum_xy = sum_xy + (x[i] * y[i]);
     }
-    cov = sum_xy / (size) - (sum_x / size * sum_y / size);
+    cov = sum_xy / (float)(size) - (sum_x / (float)size * sum_y / (float)size);
     return cov;
 }
 
