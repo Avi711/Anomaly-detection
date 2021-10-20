@@ -61,8 +61,8 @@ Line linear_reg(Point **points, int size) {
     //Calculating the line
     a = cov(x,y,size) / var(x,size);
     b = y_hat - a * x_hat;
-    x_hat = x_hat / size;
-    y_hat = y_hat / size;
+    x_hat = x_hat / (float)size;
+    y_hat = y_hat / (float)size;
     return *(new Line(a,b));
 }
 
