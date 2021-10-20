@@ -72,8 +72,7 @@ float dev(Point p, Point **points, int size) {
 }
 
 float dev(Point p, Line l) {
-    float f_x = l.a * p.x + l.b;
-    float dev = f_x - p.y;
+    float dev = l.f(p.x) - p.y;
     if (dev < 0) {
         return -dev;
     } else {

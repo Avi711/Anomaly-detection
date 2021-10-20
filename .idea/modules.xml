@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Anomaly-detection.iml" filepath="$PROJECT_DIR$/.idea/Anomaly-detection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Anomaly_detection.iml" filepath="$PROJECT_DIR$/.idea/Anomaly_detection.iml" />
     </modules>
   </component>
 </project>
