@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/avi/Desktop/Anomaly-detection/main.cpp
-iostream
--
+/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.cpp
+anomaly_detection_util.h
+/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+cmath
+/home/avi/Desktop/Anomaly-detection/cmath
+
+/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
 

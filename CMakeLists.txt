@@ -8,4 +8,4 @@ include_directories(.)
 add_executable(Anomaly_detection
         anomaly_detection_util.cpp
         anomaly_detection_util.h
-        main.cpp)
+        MainTrain.cpp)

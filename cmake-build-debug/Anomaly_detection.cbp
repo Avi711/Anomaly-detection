@@ -84,13 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/MainTrain.cpp">
+			<Option target="Anomaly_detection"/>
+		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.cpp">
 			<Option target="Anomaly_detection"/>
 		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h">
-			<Option target="Anomaly_detection"/>
-		</Unit>
-		<Unit filename="/home/avi/Desktop/Anomaly-detection/main.cpp">
 			<Option target="Anomaly_detection"/>
 		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/CMakeLists.txt">
