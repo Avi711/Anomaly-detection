@@ -1,5 +1,6 @@
 //
-// Created by avi on 14/10/2021.
+// Created by Avraham Sikirov - 318731478
+// Created by Kehat Sudri - 318409745
 //
 
 #ifndef APPROJECT_ANOMALY_DETECTION_UTIL_H

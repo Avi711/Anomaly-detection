@@ -1,12 +1,11 @@
 //
-// Created by avi on 14/10/2021.
+// Created by Avraham Sikirov - 318731478
+// Created by Kehat Sudri - 318409745
 //
 
 
 #include "anomaly_detection_util.h"
 #include "cmath"
-//This function
-
 
 
 
@@ -47,9 +46,6 @@ float pearson(float *x, float *y, int size) {
 }
 
 Line linear_reg(Point **points, int size) {
-    if (size == 0) {
-        throw(size);
-    }
     float x_hat = 0,y_hat = 0,a,b;
     // Creating the arrays for the cov and var function.
     float* x = new float[size];
@@ -81,4 +77,3 @@ float dev(Point p, Line l) {
         return dev;
     }
 }
-
