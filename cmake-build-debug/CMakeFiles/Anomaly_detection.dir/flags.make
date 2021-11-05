@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/avi/Desktop/Anomaly-detection/.
 
-CXX_FLAGS = -g -std=gnu++14
+CXX_FLAGS = -g -std=gnu++11
 

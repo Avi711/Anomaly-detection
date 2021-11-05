@@ -84,7 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.cpp">
+			<Option target="Anomaly_detection"/>
+		</Unit>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.h">
+			<Option target="Anomaly_detection"/>
+		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/MainTrain.cpp">
+			<Option target="Anomaly_detection"/>
+		</Unit>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp">
+			<Option target="Anomaly_detection"/>
+		</Unit>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h">
 			<Option target="Anomaly_detection"/>
 		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.cpp">
