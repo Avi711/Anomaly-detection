@@ -225,6 +225,30 @@ anomaly_detection_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.s
 .PHONY : anomaly_detection_util.cpp.s
 
+timeseries.o: timeseries.cpp.o
+.PHONY : timeseries.o
+
+# target to build an object file
+timeseries.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o
+.PHONY : timeseries.cpp.o
+
+timeseries.i: timeseries.cpp.i
+.PHONY : timeseries.i
+
+# target to preprocess a source file
+timeseries.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/timeseries.cpp.i
+.PHONY : timeseries.cpp.i
+
+timeseries.s: timeseries.cpp.s
+.PHONY : timeseries.s
+
+# target to generate assembly for a file
+timeseries.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/timeseries.cpp.s
+.PHONY : timeseries.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"
+	@echo "... timeseries.o"
+	@echo "... timeseries.i"
+	@echo "... timeseries.s"
 .PHONY : help
 
 

@@ -105,6 +105,12 @@
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h">
 			<Option target="Anomaly_detection"/>
 		</Unit>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/timeseries.cpp">
+			<Option target="Anomaly_detection"/>
+		</Unit>
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/timeseries.h">
+			<Option target="Anomaly_detection"/>
+		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
