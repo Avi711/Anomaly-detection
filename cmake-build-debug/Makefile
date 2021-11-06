@@ -129,6 +129,30 @@ Anomaly_detection/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/build
 .PHONY : Anomaly_detection/fast
 
+AnomalyDetector.o: AnomalyDetector.cpp.o
+.PHONY : AnomalyDetector.o
+
+# target to build an object file
+AnomalyDetector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o
+.PHONY : AnomalyDetector.cpp.o
+
+AnomalyDetector.i: AnomalyDetector.cpp.i
+.PHONY : AnomalyDetector.i
+
+# target to preprocess a source file
+AnomalyDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.i
+.PHONY : AnomalyDetector.cpp.i
+
+AnomalyDetector.s: AnomalyDetector.cpp.s
+.PHONY : AnomalyDetector.s
+
+# target to generate assembly for a file
+AnomalyDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.s
+.PHONY : AnomalyDetector.cpp.s
+
 MainTrain.o: MainTrain.cpp.o
 .PHONY : MainTrain.o
 
@@ -176,30 +200,6 @@ SimpleAnomalyDetector.s: SimpleAnomalyDetector.cpp.s
 SimpleAnomalyDetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.s
 .PHONY : SimpleAnomalyDetector.cpp.s
-
-_AnomalyDetector.o: _AnomalyDetector.cpp.o
-.PHONY : _AnomalyDetector.o
-
-# target to build an object file
-_AnomalyDetector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/_AnomalyDetector.cpp.o
-.PHONY : _AnomalyDetector.cpp.o
-
-_AnomalyDetector.i: _AnomalyDetector.cpp.i
-.PHONY : _AnomalyDetector.i
-
-# target to preprocess a source file
-_AnomalyDetector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/_AnomalyDetector.cpp.i
-.PHONY : _AnomalyDetector.cpp.i
-
-_AnomalyDetector.s: _AnomalyDetector.cpp.s
-.PHONY : _AnomalyDetector.s
-
-# target to generate assembly for a file
-_AnomalyDetector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/_AnomalyDetector.cpp.s
-.PHONY : _AnomalyDetector.cpp.s
 
 anomaly_detection_util.o: anomaly_detection_util.cpp.o
 .PHONY : anomaly_detection_util.o
@@ -258,15 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Anomaly_detection"
+	@echo "... AnomalyDetector.o"
+	@echo "... AnomalyDetector.i"
+	@echo "... AnomalyDetector.s"
 	@echo "... MainTrain.o"
 	@echo "... MainTrain.i"
 	@echo "... MainTrain.s"
 	@echo "... SimpleAnomalyDetector.o"
 	@echo "... SimpleAnomalyDetector.i"
 	@echo "... SimpleAnomalyDetector.s"
-	@echo "... _AnomalyDetector.o"
-	@echo "... _AnomalyDetector.i"
-	@echo "... _AnomalyDetector.s"
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"

@@ -84,10 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.cpp">
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/AnomalyDetector.cpp">
 			<Option target="Anomaly_detection"/>
 		</Unit>
-		<Unit filename="/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.h">
+		<Unit filename="/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h">
 			<Option target="Anomaly_detection"/>
 		</Unit>
 		<Unit filename="/home/avi/Desktop/Anomaly-detection/MainTrain.cpp">

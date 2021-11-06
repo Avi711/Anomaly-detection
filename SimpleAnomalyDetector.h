@@ -2,11 +2,12 @@
 // Created by avi on 05/11/2021.
 //
 
-#include " AnomalyDetector.h"
-#include "anomaly_detection_util.h"
+
 #ifndef ANOMALY_DETECTION_SIMPLEANOMALYDETECTOR_H_H
 #define ANOMALY_DETECTION_SIMPLEANOMALYDETECTOR_H_H
 
+#include "anomaly_detection_util.h"
+#include "AnomalyDetector.h"
 
 struct correlatedFeatures{
     string feature1,feature2; // names of the correlated features

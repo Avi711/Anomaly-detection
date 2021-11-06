@@ -6,11 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.cpp
- AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.h
+../timeseries.h
+string
+-
+iostream
+-
+vector
+-
+fstream
+-
+sstream
+-
+algorithm
+-
 
-/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.h
+/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+anomaly_detection_util.h
+/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+timeseries.h
+-
 iostream
 -
 vector
@@ -31,23 +45,29 @@ SimpleAnomalyDetector.h
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
 timeseries.h
 /home/avi/Desktop/Anomaly-detection/timeseries.h
-map
-/home/avi/Desktop/Anomaly-detection/map
+vector
+-
 
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
 SimpleAnomalyDetector.h
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
+vector
+-
 
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
- AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/ AnomalyDetector.h
 anomaly_detection_util.h
 /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+AnomalyDetector.h
+/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
 
 /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+cmath
+/home/avi/Desktop/Anomaly-detection/cmath
 
-/home/avi/Desktop/Anomaly-detection/timeseries.h
+/home/avi/Desktop/Anomaly-detection/timeseries.cpp
 timeseries.h
+/home/avi/Desktop/Anomaly-detection/timeseries.h
+
 /home/avi/Desktop/Anomaly-detection/timeseries.h
 string
 -

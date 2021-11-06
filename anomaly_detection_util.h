@@ -6,6 +6,8 @@
 #ifndef APPROJECT_ANOMALY_DETECTION_UTIL_H
 #define APPROJECT_ANOMALY_DETECTION_UTIL_H
 
+#include "cmath"
+
 
 // returns the variance of X and Y
 float var(float* x, int size);

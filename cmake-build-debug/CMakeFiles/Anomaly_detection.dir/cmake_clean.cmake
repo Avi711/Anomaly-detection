@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "Anomaly_detection"
   "Anomaly_detection.pdb"
+  "CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o"
   "CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o"
   "CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o"
-  "CMakeFiles/Anomaly_detection.dir/_AnomalyDetector.cpp.o"
   "CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o"
   "CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o"
 )
