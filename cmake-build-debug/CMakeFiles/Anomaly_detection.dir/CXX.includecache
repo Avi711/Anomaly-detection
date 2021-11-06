@@ -36,18 +36,6 @@ sstream
 algorithm
 -
 
-/home/avi/Desktop/Anomaly-detection/MainTrain.cpp
-iostream
--
-anomaly_detection_util.h
-/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
-SimpleAnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-timeseries.h
-/home/avi/Desktop/Anomaly-detection/timeseries.h
-vector
--
-
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
 SimpleAnomalyDetector.h
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
@@ -63,22 +51,4 @@ AnomalyDetector.h
 /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
 cmath
 /home/avi/Desktop/Anomaly-detection/cmath
-
-/home/avi/Desktop/Anomaly-detection/timeseries.cpp
-timeseries.h
-/home/avi/Desktop/Anomaly-detection/timeseries.h
-
-/home/avi/Desktop/Anomaly-detection/timeseries.h
-string
--
-iostream
--
-vector
--
-fstream
--
-sstream
--
-algorithm
--
 
