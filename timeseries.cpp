@@ -2,7 +2,7 @@
 // Created by avi on 06/11/2021.
 //
 
-#include "timeseries.h"
+#include "AnomalyDetector.h"
 
 void TimeSeries::initializeData(string fileName) {
     int rows = 0;
