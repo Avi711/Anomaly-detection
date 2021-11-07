@@ -16,17 +16,31 @@ bool wrong(float val, float expected){
 int main(){
 
     //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
+    // kehat:    /home/kehat/CLionProjects/Anomaly-detection/data.csv
 
    // string line;
    // std::cin >> line;
 
-    TimeSeries* check = new TimeSeries("/home/kehat/CLionProjects/Anomaly-detection/data.csv");
+    TimeSeries* check = new TimeSeries("/home/avi/Desktop/Anomaly-detection/data.csv");
 
    vector<Feature> vec = check->getData2();
 
    vector<float> values = vec[1].getValues();
 
    cout << values[0] << endl;
+
+   SimpleAnomalyDetector *simpleAnomalyDetector = new SimpleAnomalyDetector();
+
+   simpleAnomalyDetector->learnNormal(*check);
+   simpleAnomalyDetector->detect(*check);
+
+
+   cout << simpleAnomalyDetector->getNormalModel()[0].feature1 << endl;
+    cout << simpleAnomalyDetector->getNormalModel()[0].feature2 << endl;
+    cout << simpleAnomalyDetector->getNormalModel()[0].corrlation << endl;
+
+
+
 
 
 

@@ -3,7 +3,8 @@
 
 CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o: \
  ../AnomalyDetector.cpp \
- ../anomaly_detection_util.h
+ ../AnomalyDetector.h \
+ ../timeseries.h
 CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o: \
  ../AnomalyDetector.h \
  ../MainTrain.cpp \

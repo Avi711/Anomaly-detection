@@ -52,8 +52,7 @@ public:
     TimeSeries(string csv);
     string **getData();
     std::vector<Feature> getData2() const;
-
-    vector<float> getValuesByName(string name);
+    vector<float> getValuesByName(string name) const;
 };
 
 #endif //ANOMALY_DETECTION_TIMESERIES_H

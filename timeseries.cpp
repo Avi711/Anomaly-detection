@@ -52,16 +52,12 @@ TimeSeries::TimeSeries(string fileName) {
 string **TimeSeries::getData() {
     return this->data;
 }
-
 std::vector<Feature> TimeSeries::getData2() const {
     return this->vec;
 }
-
-vector<float> TimeSeries::getValuesByName(string name) {
+vector<float> TimeSeries::getValuesByName(string name) const {
     for (Feature i: vec) {
-        if (i.getName().compare(name))
+        if (i.getName() == name)
             return i.getValues();
     }
 }
-
-

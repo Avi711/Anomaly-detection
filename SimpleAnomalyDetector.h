@@ -22,6 +22,7 @@ struct correlatedFeatures{
 };
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
     std::vector<correlatedFeatures> correlated;
+    std::vector<correlatedFeatures> correlatedfinal;
 public:
     SimpleAnomalyDetector();
     virtual ~SimpleAnomalyDetector();
