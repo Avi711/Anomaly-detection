@@ -21,6 +21,4 @@ void SimpleAnomalyDetector ::learnNormal(const TimeSeries &ts) {
             }
         }
     }
-
-
 }
