@@ -17,11 +17,10 @@ int main(){
 
     //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
 
+   // string line;
+   // std::cin >> line;
 
-    string line;
-    std::cin >> line;
-
-    TimeSeries* check = new TimeSeries(line);
+    TimeSeries* check = new TimeSeries("/home/kehat/CLionProjects/Anomaly-detection/data.csv");
 
    vector<Feature> vec = check->getData2();
 
