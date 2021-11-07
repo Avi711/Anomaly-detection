@@ -17,6 +17,7 @@ int main(){
 
     //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
 
+
     string line;
     std::cin >> line;
 
