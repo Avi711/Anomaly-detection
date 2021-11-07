@@ -4,8 +4,10 @@
 
 #ifndef ANOMALY_DETECTION_ANOMALYDETECTOR_H
 #define ANOMALY_DETECTION_ANOMALYDETECTOR_H
-#include "anomaly_detection_util.h"
+
 #include "timeseries.h"
+
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -14,48 +16,6 @@
 using std::cout;
 using std::string;
 using std::vector;
-
-
-class Feature {
-    string name;
-    std::vector<float> vector;
-public:
-    Feature(string name) {
-        this->name = name;
-    }
-    void addValue(float val) {
-        vector.push_back(val);
-    }
-    string getName() {
-        return this->name;
-    }
-    std::vector<float> getValues() {
-        return this->vector;
-    }
-    float getValue(int i) {
-        return vector[i];
-    }
-};
-
-
-class TimeSeries {
-    string csv;
-    string **data;
-    std::vector<Feature> vec;
-    //std::vector<correlatedFeatures> correlatedFeatures;
-
-    void initializeData(string fileName);
-    void loadCSV(string fileName);
-public:
-    TimeSeries(string csv);
-    string **getData();
-    std::vector<Feature> getData2() const;
-
-    vector<float> getValuesByName(string name);
-};
-
-
-
 
 
 class AnomalyReport{
