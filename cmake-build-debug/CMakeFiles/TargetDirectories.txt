@@ -1,3 +1,0 @@
-/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir
