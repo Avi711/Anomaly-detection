@@ -15,7 +15,12 @@ bool wrong(float val, float expected){
 // this is a simple test to put you on the right track
 int main(){
 
-    TimeSeries* check = new TimeSeries("/home/avi/Desktop/Anomaly-detection/data.csv");
+    //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
+
+    string line;
+    std::cin >> line;
+
+    TimeSeries* check = new TimeSeries(line);
 
    vector<Feature> vec = check->getData2();
 

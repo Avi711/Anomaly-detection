@@ -32,12 +32,6 @@ timeseries.h
 vector
 -
 
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-vector
--
-
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
 timeseries.h
 /home/avi/Desktop/Anomaly-detection/timeseries.h
@@ -55,10 +49,6 @@ vector
 /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
 cmath
 /home/avi/Desktop/Anomaly-detection/cmath
-
-/home/avi/Desktop/Anomaly-detection/timeseries.cpp
-AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
 
 /home/avi/Desktop/Anomaly-detection/timeseries.h
 string
