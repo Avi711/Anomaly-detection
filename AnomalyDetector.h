@@ -5,7 +5,7 @@
 #ifndef ANOMALY_DETECTION_ANOMALYDETECTOR_H
 #define ANOMALY_DETECTION_ANOMALYDETECTOR_H
 #include "anomaly_detection_util.h"
-#include <timeseries.h>
+#include "timeseries.h"
 #include <iostream>
 #include <vector>
 #include <fstream>

@@ -11,11 +11,11 @@ CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o: \
  ../anomaly_detection_util.h \
  ../timeseries.h
 CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o: \
- ../timeseries.h \
  ../AnomalyDetector.h \
  ../SimpleAnomalyDetector.cpp \
  ../SimpleAnomalyDetector.h \
- ../anomaly_detection_util.h
+ ../anomaly_detection_util.h \
+ ../timeseries.h
 CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o: \
  ../anomaly_detection_util.cpp \
  ../anomaly_detection_util.h

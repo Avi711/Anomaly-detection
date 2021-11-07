@@ -4,7 +4,7 @@
 
 #include "timeseries.h"
 
-void TimeSeries :: initializeData(string fileName) {
+void TimeSeries::initializeData(string fileName) {
     int rows = 0;
     int columns = 0;
     std::ifstream file;
@@ -23,7 +23,7 @@ void TimeSeries :: initializeData(string fileName) {
     }
 }
 
-void TimeSeries ::loadCSV(string fileName) {
+void TimeSeries::loadCSV(string fileName) {
     initializeData(fileName);
     std::ifstream file;
     file.open(fileName);
@@ -35,8 +35,7 @@ void TimeSeries ::loadCSV(string fileName) {
             if (i == 0) {
                 Feature *feature = new Feature(segment);
                 vec.push_back(*feature);
-            }
-            else {
+            } else {
                 vec[j].addValue(std::stof(segment));
             }
             data[i][j] = segment;
@@ -45,15 +44,24 @@ void TimeSeries ::loadCSV(string fileName) {
     }
 }
 
-TimeSeries ::TimeSeries(string fileName) {
+TimeSeries::TimeSeries(string fileName) {
     this->csv = fileName;
     loadCSV(csv);
 }
 
-string** TimeSeries ::getData() {
+string **TimeSeries::getData() {
     return this->data;
 }
 
-std::vector<Feature> TimeSeries ::getData2() const {
+std::vector<Feature> TimeSeries::getData2() const {
     return this->vec;
 }
+
+vector<float> TimeSeries::getValuesByName(string name) {
+    for (Feature i: vec) {
+        if (i.getName().compare(name))
+            return i.getValues();
+    }
+}
+
+

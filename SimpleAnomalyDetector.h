@@ -8,6 +8,7 @@
 
 #include "anomaly_detection_util.h"
 #include "AnomalyDetector.h"
+#include <vector>
 
 struct correlatedFeatures{
     string feature1,feature2; // names of the correlated features

@@ -12,7 +12,13 @@ void SimpleAnomalyDetector ::learnNormal(const TimeSeries &ts) {
         int c = -1;
         for (int j = i; j < data.size(); ++j) {
             float p = pearson(&data[i].getValues()[0],&data[j].getValues()[0], data[j].getValues().size());
+            if (std::abs(p) > m) {
+                m = p;
+                c = j;
+            }
+            if (c != -1) {
 
+            }
         }
     }
 
