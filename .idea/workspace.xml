@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="updating eli's headers." />
+    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="updating eli's headers.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +44,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Computer structure/Targil2/part1" />
   </component>
   <component name="RunManager">
     <configuration name="Anomaly_detection" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Anomaly_detection" TARGET_NAME="Anomaly_detection" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Anomaly_detection" RUN_TARGET_NAME="Anomaly_detection">
@@ -69,7 +71,7 @@
       <workItem from="1636312074399" duration="3787000" />
       <workItem from="1636375599525" duration="137000" />
       <workItem from="1636462541697" duration="1983000" />
-      <workItem from="1636467307091" duration="12227000" />
+      <workItem from="1636467307091" duration="13273000" />
     </task>
     <task id="LOCAL-00001" summary="Disabling timeseries.h">
       <created>1636311712111</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636486685542</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updating eli's headers.">
+      <created>1636487475901</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636487475901</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
