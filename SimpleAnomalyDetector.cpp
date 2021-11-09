@@ -18,7 +18,7 @@ void SimpleAnomalyDetector::findMaxDev(const TimeSeries &ts) {
                 Point *p = new Point(x, y);
                 trs = dev(*p, cf[i].lin_reg);
                 if (trs > cf[i].threshold) {
-                    cf[i].threshold = trs;
+                    cf[i].threshold = (trs) * 1.1;
                 }
             }
         }
@@ -29,7 +29,7 @@ void SimpleAnomalyDetector::findMaxDev(const TimeSeries &ts) {
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     std::vector<Feature> data = ts.getData2();
     vector<Point *> points;
-    for (int i = 1; i < data.size(); ++i) {
+    for (int i = 0; i < data.size(); ++i) {
         int m = 0;
         int c = -1;
         float sum = 0, counter = 0;
@@ -59,7 +59,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
         }
         float avg = sum / counter;
         for (int m = 0; m < cf.size(); m++) {
-            if (cf[m].corrlation < avg) cf.erase(cf.begin() + m);
+            if (cf[m].corrlation < 0.9) cf.erase(cf.begin() + m);
         }
     }
     findMaxDev(ts);
@@ -69,7 +69,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     vector<Point *> points;
     std::vector<AnomalyReport> reports;
-    for (int i = 0; i < this->cf.size(); ++i) {
+    /*for (int i = 0; i < this->cf.size(); ++i) {
         if (cf[i].corrlation >= cf[i].threshold) {
             for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
                 float x = ts.getValuesByName(cf[i].feature1)[j];
@@ -80,20 +80,19 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
         }
         cf[i].lin_reg = linear_reg(&points[0], points.size());
         points.clear();
-    }
+    }*/
     for (int i = 0; i < this->cf.size(); ++i) {
-        if (cf[i].corrlation >= cf[i].threshold) {
+      //  if (cf[i].corrlation >= cf[i].threshold) {
             for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
                 float x = ts.getValuesByName(cf[i].feature1)[j];
                 float y = ts.getValuesByName(cf[i].feature2)[j];
                 Point *p = new Point(x, y);
                 if (dev(*p, cf[i].lin_reg) > cf[i].threshold) {
-                    reports.push_back(AnomalyReport("report", ts.getData2()[0].getValues()[j]));
+                    string s = cf[i].feature1 + '-' + cf[i].feature2;
+                    reports.push_back(AnomalyReport(s, ts.getData2()[0].getValues()[j]));
                 }
             }
         }
-    }
-
-
+  //  }
     return reports;
 }
