@@ -6,43 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.h
 string
 -
 vector
 -
 timeseries.h
-/home/avi/Desktop/Anomaly-detection/timeseries.h
+/home/kehat/CLionProjects/Anomaly-detection/timeseries.h
 math.h
-/home/avi/Desktop/Anomaly-detection/math.h
+/home/kehat/CLionProjects/Anomaly-detection/math.h
 
-/home/avi/Desktop/Anomaly-detection/MainTrain.cpp
-iostream
--
-vector
--
-AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.cpp
 SimpleAnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
+/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.h
 
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
+/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.h
 anomaly_detection_util.h
-/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
 AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.h
 vector
 -
 algorithm
@@ -52,9 +34,9 @@ string.h
 math.h
 -
 
-/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
 
-/home/avi/Desktop/Anomaly-detection/timeseries.h
+/home/kehat/CLionProjects/Anomaly-detection/timeseries.h
 string
 -
 iostream

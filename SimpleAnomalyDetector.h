@@ -30,7 +30,9 @@ public:
     vector<correlatedFeatures> getNormalModel(){
         return cf;
     }
-};
+    void findMaxDev(const TimeSeries&ts);
+
+    };
 
 
 
