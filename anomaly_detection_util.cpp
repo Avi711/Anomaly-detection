@@ -4,12 +4,13 @@
 //
 
 
+#include <math.h>
 #include "anomaly_detection_util.h"
 
 
 
 
-float var(float *x, int size) {
+float var(float* x, int size) {
     // calculating Expectation value
     float mu = 0, var = 0;
     for (int i = 0; i < size; ++i) {

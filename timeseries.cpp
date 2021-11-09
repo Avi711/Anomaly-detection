@@ -2,7 +2,7 @@
 // Created by avi on 06/11/2021.
 //
 
-#include "AnomalyDetector.h"
+#include "timeseries.h"
 
 void TimeSeries::initializeData(string fileName) {
     int rows = 0;
@@ -44,8 +44,8 @@ void TimeSeries::loadCSV(string fileName) {
     }
 }
 
-TimeSeries::TimeSeries(string fileName) {
-    this->csv = fileName;
+TimeSeries::TimeSeries(const char* CSVfileName) {
+    this->csv = CSVfileName;
     loadCSV(csv);
 }
 

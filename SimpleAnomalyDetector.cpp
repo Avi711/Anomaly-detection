@@ -3,11 +3,10 @@
 //
 
 #include "SimpleAnomalyDetector.h"
-#include <vector>
 
-SimpleAnomalyDetector ::SimpleAnomalyDetector() {}
+SimpleAnomalyDetector::SimpleAnomalyDetector() {}
 
-SimpleAnomalyDetector ::~SimpleAnomalyDetector() noexcept {}
+SimpleAnomalyDetector::~SimpleAnomalyDetector() noexcept {}
 
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     std::vector<Feature> data = ts.getData2();
@@ -34,47 +33,45 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                     points.push_back(new Point(data[i].getValue(k), (data[j].getValue(k))));
                     cf1.lin_reg = linear_reg(&points[0], data[i].getValues().size());
                 }*/
-                this->correlated.push_back(cf1);
+                this->cf.push_back(cf1);
             }
         }
         float avg = sum / counter;
-        for (int m = 0; m < correlated.size(); m++) {
-            correlated[m].threshold = avg;
+        for (int m = 0; m < cf.size(); m++) {
+            cf[m].threshold = avg;
         }
     }
 }
 
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     vector<Point *> points;
-    for(int i = 0; i < this->correlated.size(); ++i) {
-        if (correlated[i].corrlation >= correlated[i].threshold) {
-            for (int j = 0; j < ts.getValuesByName(correlated[i].feature1).size(); ++j) {
-                float x = ts.getValuesByName(correlated[i].feature1)[j];
-                float y= ts.getValuesByName(correlated[i].feature2)[j];
+    std::vector<AnomalyReport> reports;
+    for(int i = 0; i < this->cf.size(); ++i) {
+        if (cf[i].corrlation >= cf[i].threshold) {
+            for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
+                float x = ts.getValuesByName(cf[i].feature1)[j];
+                float y= ts.getValuesByName(cf[i].feature2)[j];
                 Point *p = new Point(x,y);
                 points.push_back(p);
             }
-            correlatedfinal.push_back(correlated[i]);
+            correlatedfinal.push_back(cf[i]);
         }
-        correlated[i].lin_reg = linear_reg(&points[0], points.size());
+        cf[i].lin_reg = linear_reg(&points[0], points.size());
     }
-    for(int i = 0; i < this->correlated.size(); ++i) {
-        if (correlated[i].corrlation >= correlated[i].threshold) {
-            for (int j = 0; j < ts.getValuesByName(correlated[i].feature1).size(); ++j) {
-                float x = ts.getValuesByName(correlated[i].feature1)[j];
-                float y= ts.getValuesByName(correlated[i].feature2)[j];
+    for(int i = 0; i < this->cf.size(); ++i) {
+        if (cf[i].corrlation >= cf[i].threshold) {
+            for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
+                float x = ts.getValuesByName(cf[i].feature1)[j];
+                float y= ts.getValuesByName(cf[i].feature2)[j];
                 Point *p = new Point(x,y);
-                if(dev(*p, correlated[i].lin_reg) > correlated[i].corrlation) {
-
+                if(dev(*p, cf[i].lin_reg) > cf[i].corrlation) {
+                    reports.push_back(AnomalyReport("report", ts.getData2()[0].getValues()[j]));
                 }
             }
-            correlatedfinal.push_back(correlated[i]);
+            correlatedfinal.push_back(cf[i]);
         }
-        correlated[i].lin_reg = linear_reg(&points[0], points.size());
+        cf[i].lin_reg = linear_reg(&points[0], points.size());
     }
-    std::vector<AnomalyReport> a;
-    return a;
-}
-vector<correlatedFeatures> SimpleAnomalyDetector ::getNormalModel() {
-    return this->correlatedfinal;
+
+    return reports;
 }

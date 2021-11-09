@@ -3,10 +3,10 @@
 // Created by Kehat Sudri - 318409745
 //
 
-#ifndef APPROJECT_ANOMALY_DETECTION_UTIL_H
-#define APPROJECT_ANOMALY_DETECTION_UTIL_H
+#ifndef ANOMALYDETECTORUTIL_H_
+#define ANOMALYDETECTORUTIL_H_
 
-#include "cmath"
+
 
 
 // returns the variance of X and Y
@@ -37,4 +37,4 @@ float dev(Point p,Point** points, int size);
 float dev(Point p,Line l);
 
 
-#endif //APPROJECT_ANOMALY_DETECTION_UTIL_H
+#endif

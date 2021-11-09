@@ -2,11 +2,9 @@
 // Created by avi on 06/11/2021.
 //
 
+#ifndef TIMESERIES_H_
+#define TIMESERIES_H_
 
-#ifndef ANOMALY_DETECTION_TIMESERIES_H
-#define ANOMALY_DETECTION_TIMESERIES_H
-
-//#include "SimpleAnomalyDetector.h"
 
 
 #include <string>
@@ -16,8 +14,7 @@
 #include <sstream>
 #include <algorithm>
 
-using std::string;
-using std::vector;
+using namespace std;
 
 
 class Feature {
@@ -49,10 +46,10 @@ class TimeSeries {
     void initializeData(string fileName);
     void loadCSV(string fileName);
 public:
-    TimeSeries(string csv);
+    TimeSeries(const char* CSVfileName);
     string **getData();
     std::vector<Feature> getData2() const;
     vector<float> getValuesByName(string name) const;
 };
 
-#endif //ANOMALY_DETECTION_TIMESERIES_H
+#endif /* TIMESERIES_H_ */
