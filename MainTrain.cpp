@@ -46,6 +46,7 @@ void generateTestCSV(float a1,float b1, float a2, float b2, int anomaly){
 }
 
 void checkCorrelationTrain(correlatedFeatures c,string f1, string f2, float a, float b){
+
     if(c.feature1==f1){
         if(c.feature2!=f2)
             cout<<"wrong correlated feature of "<<f1<<" (-20)"<<endl;
@@ -71,9 +72,8 @@ int main(){
     //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
     // kehat:    /home/kehat/CLionProjects/Anomaly-detection/data.csv
 
-   // string line;
-   // std::cin >> line;
 
+/*
     TimeSeries* check = new TimeSeries("/home/avi/Desktop/Anomaly-detection/data.csv");
 
    vector<Feature> vec = check->getData2();
@@ -92,11 +92,12 @@ int main(){
 
    cout << simpleAnomalyDetector->getNormalModel()[0].feature1 << endl;
     cout << simpleAnomalyDetector->getNormalModel()[0].feature2 << endl;
-    cout << simpleAnomalyDetector->getNormalModel()[0].corrlation << endl;
+    cout << simpleAnomalyDetector->getNormalModel()[0].corrlation << endl;*/
 
 
 
-   /* srand (time(NULL));
+
+    srand (time(NULL));
     float a1=1+rand()%10, b1=-50+rand()%100;
     float a2=1+rand()%20 , b2=-50+rand()%100;
 
@@ -145,7 +146,8 @@ int main(){
     cout<<"done"<<endl;
     return 0;
 
-*/
+
+
 
 
 

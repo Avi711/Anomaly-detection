@@ -11,10 +11,13 @@ void TimeSeries::initializeData(string fileName) {
     file.open(fileName);
     string line;
     while (getline(file, line)) {
+        if (rows == 1) {
+            columns = std::count(line.begin(), line.end(), ',');
+        }
         string segment = line;
         ++rows;
     }
-    columns = std::count(line.begin(), line.end(), ',');
+    //columns = std::count(line.begin(), line.end(), ',');
     ++columns;
 
     data = new string *[rows];
