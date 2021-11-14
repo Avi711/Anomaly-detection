@@ -41,14 +41,11 @@ public:
 
 class TimeSeries {
     string csv;
-    string **data;
     std::vector<Feature> vec;
-    void initializeData(string fileName);
     void loadCSV(string fileName);
 public:
     TimeSeries(const char* CSVfileName);
-    string **getData();
-    std::vector<Feature> getData2() const;
+    std::vector<Feature> getData() const;
     vector<float> getValuesByName(string name) const;
 };
 

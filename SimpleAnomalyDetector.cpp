@@ -15,19 +15,18 @@ void SimpleAnomalyDetector::findMaxDev(const TimeSeries &ts) {
             for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
                 float x = ts.getValuesByName(cf[i].feature1)[j];
                 float y = ts.getValuesByName(cf[i].feature2)[j];
-                Point *p = new Point(x, y);
-                trs = dev(*p, cf[i].lin_reg);
+                Point p(x, y);
+                trs = dev(p, cf[i].lin_reg);
                 if (trs > cf[i].threshold) {
-                    cf[i].threshold = (trs) * 1.2;
+                    cf[i].threshold = (trs) * 1.25;
                 }
             }
         }
     }
 
 }
-
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
-    std::vector<Feature> data = ts.getData2();
+    std::vector<Feature> data = ts.getData();
     vector<Point *> points;
     for (int i = 0; i < data.size(); ++i) {
         int m = 0;
@@ -53,46 +52,33 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                     points.push_back(p);
                 }
                 cf1.lin_reg = linear_reg(&points[0], data[i].getValues().size());
+                for (Point *p : points) {
+                    delete p;
+                }
                 points.clear();
                 this->cf.push_back(cf1);
             }
         }
-        float avg = sum / counter;
         for (int m = 0; m < cf.size(); m++) {
-            if (cf[m].corrlation < 0.9) cf.erase(cf.begin() + m);
+            if (cf[m].corrlation < 0.90) cf.erase(cf.begin() + m);
         }
     }
     findMaxDev(ts);
-
 }
 
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     vector<Point *> points;
     std::vector<AnomalyReport> reports;
-    /*for (int i = 0; i < this->cf.size(); ++i) {
-        if (cf[i].corrlation >= cf[i].threshold) {
-            for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
-                float x = ts.getValuesByName(cf[i].feature1)[j];
-                float y = ts.getValuesByName(cf[i].feature2)[j];
-                Point *p = new Point(x, y);
-                points.push_back(p);
-            }
-        }
-        cf[i].lin_reg = linear_reg(&points[0], points.size());
-        points.clear();
-    }*/
     for (int i = 0; i < this->cf.size(); ++i) {
-      //  if (cf[i].corrlation >= cf[i].threshold) {
             for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
                 float x = ts.getValuesByName(cf[i].feature1)[j];
                 float y = ts.getValuesByName(cf[i].feature2)[j];
-                Point *p = new Point(x, y);
-                if (dev(*p, cf[i].lin_reg) > cf[i].threshold) {
+                Point p(x, y);
+                if (dev(p, cf[i].lin_reg) > cf[i].threshold) {
                     string s = cf[i].feature1 + '-' + cf[i].feature2;
-                    reports.push_back(AnomalyReport(s, ts.getData2()[0].getValues()[j]));
+                    reports.push_back(AnomalyReport(s, ts.getData()[0].getValues()[j]));
                 }
             }
         }
-  //  }
     return reports;
 }

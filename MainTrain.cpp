@@ -7,6 +7,8 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 #include <math.h>
+#include <chrono>
+#include <thread>
 
 using namespace std;
 
@@ -65,40 +67,11 @@ void checkCorrelationTrain(correlatedFeatures c,string f1, string f2, float a, f
 }
 
 
+int test() {
 
-// this is a simple test to put you on the right track
-int main(){
-
-    //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
-    // kehat:    /home/kehat/CLionProjects/Anomaly-detection/data.csv
-
-
-/*
-    TimeSeries* check = new TimeSeries("/home/kehat/CLionProjects/Anomaly-detection/data.csv");
-
-   vector<Feature> vec = check->getData2();
-
-   vector<float> values = vec[1].getValues();
-
-   cout << values[0] << endl;
-
-   SimpleAnomalyDetector *simpleAnomalyDetector = new SimpleAnomalyDetector();
-
-   simpleAnomalyDetector->learnNormal(*check);
-   simpleAnomalyDetector->detect(*check);
-   simpleAnomalyDetector->getNormalModel();
-
-
-
-   cout << simpleAnomalyDetector->getNormalModel()[0].feature1 << endl;
-    cout << simpleAnomalyDetector->getNormalModel()[0].feature2 << endl;
-    cout << simpleAnomalyDetector->getNormalModel()[0].corrlation << endl;*/
-
-
-
-    srand (time(NULL));
-    float a1=1+rand()%10, b1=-50+rand()%100;
-    float a2=1+rand()%20 , b2=-50+rand()%100;
+    srand(time(NULL));
+    float a1 = 1 + rand() % 10, b1 = -50 + rand() % 100;
+    float a2 = 1 + rand() % 20, b2 = -50 + rand() % 100;
 
 
     // test the learned model: (40 points)
@@ -106,80 +79,61 @@ int main(){
     //	A-C: y=a1*x+b1
     //	B-D: y=a2*x+b2
 
-    generateTrainCSV(a1,b1,a2,b2);
+    generateTrainCSV(a1, b1, a2, b2);
     TimeSeries ts("trainFile1.csv");
     SimpleAnomalyDetector ad;
     ad.learnNormal(ts);
-    vector<correlatedFeatures> cf=ad.getNormalModel();
+    vector<correlatedFeatures> cf = ad.getNormalModel();
 
-    if(cf.size()!=2)
-        cout<<"wrong size of correlated features (-40)"<<endl;
+    if (cf.size() != 2)
+        cout << "wrong size of correlated features (-40)" << endl;
     else
-        for_each(cf.begin(),cf.end(),[&a1,&b1,&a2,&b2](correlatedFeatures c){
-            checkCorrelationTrain(c,"A","C",a1,b1); // 20 points
-            checkCorrelationTrain(c,"B","D",a2,b2); // 20 points
+        for_each(cf.begin(), cf.end(), [&a1, &b1, &a2, &b2](correlatedFeatures c) {
+            checkCorrelationTrain(c, "A", "C", a1, b1); // 20 points
+            checkCorrelationTrain(c, "B", "D", a2, b2); // 20 points
         });
 
     // test the anomaly detector: (60 points)
     // one simply anomaly is injected to the data
-    int anomaly=5+rand()%90; // one anomaly injected in a random time step
-    generateTestCSV(a1,b1,a2,b2,anomaly);
+    int anomaly = 5 + rand() % 90; // one anomaly injected in a random time step
+    generateTestCSV(a1, b1, a2, b2, anomaly);
     TimeSeries ts2("testFile1.csv");
     vector<AnomalyReport> r = ad.detect(ts2);
 
-    bool anomlyDetected=false;
-    int falseAlarms=0;
-    for_each(r.begin(),r.end(),[&anomaly,&anomlyDetected,&falseAlarms](AnomalyReport ar){
-        if(ar.description=="A-C" && ar.timeStep == anomaly)
-            anomlyDetected=true;
+    bool anomlyDetected = false;
+    int falseAlarms = 0;
+    for_each(r.begin(), r.end(), [&anomaly, &anomlyDetected, &falseAlarms](AnomalyReport ar) {
+        if (ar.description == "A-C" && ar.timeStep == anomaly)
+            anomlyDetected = true;
         else
             falseAlarms++;
     });
 
-    if(!anomlyDetected)
-        cout<<"the anomaly was not detected (-30)"<<endl;
+    if (!anomlyDetected)
+        cout << "the anomaly was not detected (-30)" << endl;
 
-    if(falseAlarms>0)
-        cout<<"you have "<<falseAlarms<<" false alarms (-"<<min(30,falseAlarms*3)<<")"<<endl;
+    if (falseAlarms > 0)
+        cout << "you have " << falseAlarms << " false alarms (-" << min(30, falseAlarms * 3) << ")" << endl;
 
-    cout<<"done"<<endl;
-    return 0;
-
-
-
-
+    cout << "done" << endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    return falseAlarms;
+}
 
 
 
 
+// this is a simple test to put you on the right track
+int main(){
+
+    //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
+    // kehat:    /home/kehat/CLionProjects/Anomaly-detection/data.csv
+    int count = 0;
+
+    for (int i = 0; i < 50; ++i ) {
+        count = count + test();
+    }
+    cout << "error: " << count << endl;
 
 
-
-
-
-/*	const int N=10;
-	float x[]={1,2,3,4,5,6,7,8,9,10};
-	float y[]={2.1,4.2,6.1,8.1,10.3,12.2,14.4,16.1,18.2,20.3};
-
-	Point* ps[N];
-	for(int i=0;i<N;i++)
-		ps[i]=new Point(x[i],y[i]);
-
-	Line l=linear_reg(ps,N);
-	Point p(4,8);
-
-	float v[]={var(x,N),cov(x,y,N),pearson(x,y,N),l.a,l.b,l.f(4),dev(p,l)};
-	float e[]={8.25,16.63,0.999,2.015,0.113,8.176,0.176};
-
-
-	for(int i=0;i<7;i++)
-		if(wrong(v[i],e[i]))
-			cout<<"error for check "<<i<<" (-14)"<<endl;
-
-
-	for(int i=0;i<N;i++)
-		delete ps[i];
-
-	cout<<"done"<<endl;
-	return 0;*/
 }
