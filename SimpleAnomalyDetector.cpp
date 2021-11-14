@@ -18,7 +18,7 @@ void SimpleAnomalyDetector::findMaxDev(const TimeSeries &ts) {
                 Point *p = new Point(x, y);
                 trs = dev(*p, cf[i].lin_reg);
                 if (trs > cf[i].threshold) {
-                    cf[i].threshold = (trs) * 1.1;
+                    cf[i].threshold = (trs) * 1.2;
                 }
             }
         }
