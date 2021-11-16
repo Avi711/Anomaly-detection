@@ -18,7 +18,7 @@ void SimpleAnomalyDetector::findMaxDev(const TimeSeries &ts) {
                 Point p(x, y);
                 trs = dev(p, cf[i].lin_reg);
                 if (trs > cf[i].threshold) {
-                    cf[i].threshold = (trs) * 1.25;
+                    cf[i].threshold = (trs) * 1.225;
                 }
             }
         }
@@ -32,8 +32,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
         int m = 0;
         int c = -1;
         float sum = 0, counter = 0;
-        for (int j = i; j < data.size(); ++j) {
-            if (i == j) continue;
+        for (int j = i + 1; j < data.size(); ++j) {
             float p = pearson(&data[i].getValues()[0], &data[j].getValues()[0], data[j].getValues().size());
             sum += fabs(p);
             counter++;

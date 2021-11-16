@@ -16,27 +16,9 @@ timeseries.h
 math.h
 /home/avi/Desktop/Anomaly-detection/math.h
 
-/home/avi/Desktop/Anomaly-detection/MainTrain.cpp
-iostream
--
-vector
--
-AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
 SimpleAnomalyDetector.h
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
-chrono
--
-thread
--
 
 /home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
 anomaly_detection_util.h
