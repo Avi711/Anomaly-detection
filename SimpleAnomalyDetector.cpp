@@ -29,9 +29,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     std::vector<Feature> data = ts.getData();
     vector<Point *> points;
     for (int i = 0; i < data.size(); ++i) {
-        int m = 0;
-        int c = -1;
-        float sum = 0, counter = 0;
+        float m = 0, c=-1, sum = 0, counter = 0;
         for (int j = i + 1; j < data.size(); ++j) {
             float p = pearson(&data[i].getValues()[0], &data[j].getValues()[0], data[j].getValues().size());
             sum += fabs(p);
@@ -40,27 +38,24 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                 m = p;
                 c = j;
             }
-            if (c != -1) {
+        }
+            if (c != -1 && fabs(m) > 0.9) {
                 correlatedFeatures cf1;
                 cf1.feature1 = data[i].getName();
-                cf1.feature2 = data[j].getName();
-                cf1.corrlation = fabs(p);
+                cf1.feature2 = data[c].getName();
+                cf1.corrlation = fabs(m);
                 cf1.threshold = 0;
                 for (int k = 0; k < data[i].getValues().size(); ++k) {
-                    Point *p = new Point(data[i].getValue(k), data[j].getValue(k));
-                    points.push_back(p);
+                    Point *t = new Point(data[i].getValue(k), data[c].getValue(k));
+                    points.push_back(t);
                 }
                 cf1.lin_reg = linear_reg(&points[0], data[i].getValues().size());
-                for (Point *p : points) {
-                    delete p;
+                for (Point *t : points) {
+                    delete t;
                 }
                 points.clear();
                 this->cf.push_back(cf1);
             }
-        }
-        for (int m = 0; m < cf.size(); m++) {
-            if (cf[m].corrlation < 0.9) cf.erase(cf.begin() + m);
-        }
     }
     findMaxDev(ts);
 }
