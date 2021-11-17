@@ -1,5 +1,6 @@
 //
-// Created by avi on 06/11/2021.
+// Created by Avraham Sikirov - 318731478
+// Created by Kehat Sudri - 318409745
 //
 
 #ifndef TIMESERIES_H_

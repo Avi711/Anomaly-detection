@@ -1,5 +1,6 @@
 //
-// Created by avi on 05/11/2021.
+// Created by Avraham Sikirov - 318731478
+// Created by Kehat Sudri - 318409745
 //
 
 #include "SimpleAnomalyDetector.h"
@@ -9,21 +10,19 @@ SimpleAnomalyDetector::SimpleAnomalyDetector() {}
 SimpleAnomalyDetector::~SimpleAnomalyDetector() noexcept {}
 
 void SimpleAnomalyDetector::findMaxDev(const TimeSeries &ts) {
-    float trs = 0;
     for (int i = 0; i < this->cf.size(); ++i) {
-        if (cf[i].corrlation >= cf[i].threshold) {
+        float temp = 0, trs = 0;
             for (int j = 0; j < ts.getValuesByName(cf[i].feature1).size(); ++j) {
                 float x = ts.getValuesByName(cf[i].feature1)[j];
                 float y = ts.getValuesByName(cf[i].feature2)[j];
                 Point p(x, y);
                 trs = dev(p, cf[i].lin_reg);
-                if (trs > cf[i].threshold) {
-                    cf[i].threshold = (trs) * 1.15;
+                if (trs > temp) {
+                    temp = trs;
+                    cf[i].threshold = (temp) * 1.15;
                 }
             }
         }
-    }
-
 }
 void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     std::vector<Feature> data = ts.getData();
@@ -68,7 +67,7 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
                 Point p(x, y);
                 if (dev(p, cf[i].lin_reg) > cf[i].threshold) {
                     string s = cf[i].feature1 + '-' + cf[i].feature2;
-                    reports.push_back(AnomalyReport(s, ts.getData()[0].getValues()[j]));
+                    reports.push_back(AnomalyReport(s, j+1));
                 }
             }
         }
