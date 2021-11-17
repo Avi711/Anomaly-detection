@@ -3,6 +3,7 @@
 //
 
 #include "timeseries.h"
+#include "math.h"
 
 void TimeSeries::loadCSV(string fileName) {
     std::ifstream file;
@@ -16,7 +17,8 @@ void TimeSeries::loadCSV(string fileName) {
                 Feature feature(segment);
                 vec.push_back(feature);
             } else {
-                vec[j].addValue(std::stof(segment));
+                float v = std::stof(segment);
+                vec[j].addValue(v);
             }
         }
     }
