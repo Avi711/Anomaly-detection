@@ -6,6 +6,36 @@
 
 #IncludeRegexTransform: 
 
+/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+string
+-
+vector
+-
+timeseries.h
+/home/avi/Desktop/Anomaly-detection/timeseries.h
+math.h
+/home/avi/Desktop/Anomaly-detection/math.h
+
+/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
+SimpleAnomalyDetector.h
+/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
+
+/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
+anomaly_detection_util.h
+/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+AnomalyDetector.h
+/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
+vector
+-
+algorithm
+-
+string.h
+-
+math.h
+-
+
+/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+
 /home/avi/Desktop/Anomaly-detection/timeseries.cpp
 timeseries.h
 /home/avi/Desktop/Anomaly-detection/timeseries.h
