@@ -8,20 +8,18 @@
 #include "anomaly_detection_util.h"
 
 
-
-
 float var(float* x, int size) {
     // calculating Expectation value
     float mu = 0, var = 0;
     for (int i = 0; i < size; ++i) {
         mu = mu + x[i];
     }
-    mu = mu / size;
+    mu = mu / (float)size;
 
     for (int i = 0; i < size; ++i) {
         var += (x[i] - mu)*(x[i] - mu);
     }
-    return var / size;
+    return var / (float)size;
 }
 
 
@@ -62,7 +60,7 @@ Line linear_reg(Point **points, int size) {
     x_hat = x_hat / (float)size;
     y_hat = y_hat / (float)size;
     b = y_hat - a * x_hat;
-    return *(new Line(a,b));
+    return (Line(a,b));
 }
 
 float dev(Point p, Point **points, int size) {
