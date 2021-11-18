@@ -22,8 +22,6 @@ float var(float* x, int size) {
     return var / (float)size;
 }
 
-
-
 float cov(float *x, float *y, int size) {
     float sum_x = 0, sum_y = 0, sum_xy = 0, cov;
     for (int i = 0; i < size; ++i) {
