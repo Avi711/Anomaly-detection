@@ -225,6 +225,30 @@ anomaly_detection_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.s
 .PHONY : anomaly_detection_util.cpp.s
 
+minCircle.o: minCircle.cpp.o
+.PHONY : minCircle.o
+
+# target to build an object file
+minCircle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o
+.PHONY : minCircle.cpp.o
+
+minCircle.i: minCircle.cpp.i
+.PHONY : minCircle.i
+
+# target to preprocess a source file
+minCircle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/minCircle.cpp.i
+.PHONY : minCircle.cpp.i
+
+minCircle.s: minCircle.cpp.s
+.PHONY : minCircle.s
+
+# target to generate assembly for a file
+minCircle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/minCircle.cpp.s
+.PHONY : minCircle.cpp.s
+
 timeseries.o: timeseries.cpp.o
 .PHONY : timeseries.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"
+	@echo "... minCircle.o"
+	@echo "... minCircle.i"
+	@echo "... minCircle.s"
 	@echo "... timeseries.o"
 	@echo "... timeseries.i"
 	@echo "... timeseries.s"
