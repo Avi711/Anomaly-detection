@@ -6,47 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
-string
--
-vector
--
-timeseries.h
-/home/avi/Desktop/Anomaly-detection/timeseries.h
-math.h
-/home/avi/Desktop/Anomaly-detection/math.h
+/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
 
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-
-/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.h
-anomaly_detection_util.h
-/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
-AnomalyDetector.h
-/home/avi/Desktop/Anomaly-detection/AnomalyDetector.h
-vector
--
-algorithm
--
-string.h
--
-math.h
+/home/kehat/CLionProjects/Anomaly-detection/minCircle.cpp
+minCircle.h
+/home/kehat/CLionProjects/Anomaly-detection/minCircle.h
+cmath
 -
 
-/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
-
-/home/avi/Desktop/Anomaly-detection/timeseries.h
-string
--
+/home/kehat/CLionProjects/Anomaly-detection/minCircle.h
 iostream
 -
 vector
 -
-fstream
+stdlib.h
 -
-sstream
+time.h
 -
-algorithm
--
+anomaly_detection_util.h
+/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
 
