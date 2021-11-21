@@ -30,4 +30,6 @@ float distance(Point &p1, Point &p2);
 
 int isPointInCircle(Point &p, Circle c);
 
+bool isCircleValid(Point **points, Circle c);
+
 #endif /* MINCIRCLE_H_ */

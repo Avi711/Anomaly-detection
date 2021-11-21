@@ -12,16 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="adding circle class.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minCircle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/minCircle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minCircle.h" beforeDir="false" afterPath="$PROJECT_DIR$/minCircle.h" afterDir="false" />
     </list>
@@ -94,7 +84,7 @@
       <workItem from="1637320497495" duration="539000" />
       <workItem from="1637322777446" duration="19000" />
       <workItem from="1637518789500" duration="424000" />
-      <workItem from="1637529748875" duration="125000" />
+      <workItem from="1637529748875" duration="887000" />
     </task>
     <task id="LOCAL-00001" summary="Disabling timeseries.h">
       <created>1636311712111</created>
@@ -257,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637320990396</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adding circle class.">
+      <created>1637529880038</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1637529880038</updated>
+    </task>
+    <task id="LOCAL-00025" summary="adding circle class.">
+      <created>1637529928069</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1637529928071</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -7,12 +7,15 @@
 #include <cmath>
 
 
-/*
+
 Circle findMinCircle(Point **points, size_t size) {
 
-return nullptr;
+    Point p(5, 7);
+    Circle c(p, 7);
+
+    return c;
 }
-*/
+
 
 /*
  *
@@ -50,5 +53,10 @@ float distance(Point &p1, Point &p2) {
 int isPointInCircle(Point &p, Circle c) {
     if (distance(p, c.center) <= c.radius)
         return 1;
+    return 0;
+}
+
+bool isCircleValid(Point **points, Circle c) {
+
     return 0;
 }
