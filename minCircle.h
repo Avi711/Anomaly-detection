@@ -21,6 +21,7 @@ public:
 };
 // --------------------------------------
 
+
 Circle findMinCircle(Point** points,size_t size);
 
 Circle buildCircleFromThreePoints(Point &p1, Point &p2, Point &p3);
