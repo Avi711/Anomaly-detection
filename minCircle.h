@@ -24,12 +24,20 @@ public:
 
 Circle findMinCircle(Point** points,size_t size);
 
+Circle minCircleBase(vector<Point> pointvec);
+
+Circle findMinCircleRec(vector <Point> v1 ,vector <Point> v2 , int size  );
+
+Circle buildCircleFromTwoPoints(Point &p1, Point &p2);
+
 Circle buildCircleFromThreePoints(Point &p1, Point &p2, Point &p3);
 
-float distance(Point &p1, Point &p2);
+float dist(Point &p1, Point &p2);
+
+float incline(Point p1, Point p2);
 
 int isPointInCircle(Point &p, Circle c);
 
-bool isCircleValid(Point **points, Circle c);
+int isCircleValid(vector<Point> &v, Circle c);
 
 #endif /* MINCIRCLE_H_ */

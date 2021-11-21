@@ -10,6 +10,7 @@ CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o: \
  ../MainTrain.cpp \
  ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \
+ ../minCircle.h \
  ../timeseries.h
 CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o: \
  ../AnomalyDetector.h \

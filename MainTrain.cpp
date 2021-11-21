@@ -9,6 +9,7 @@
 #include <math.h>
 #include <chrono>
 #include <thread>
+#include "minCircle.h"
 
 using namespace std;
 
@@ -128,12 +129,16 @@ int main(){
 
     //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
     // kehat:    /home/kehat/CLionProjects/Anomaly-detection/data.csv
-    int count = 0;
+   // int count = 0;
 
-    for (int i = 0; i < 50; ++i ) {
-        count = count + test();
-    }
-    cout << "error: " << count << endl;
-
+    //for (int i = 0; i < 50; ++i ) {
+    //    count = count + test();
+    //}
+    //cout << "error: " << count << endl;
+    Point p1(1,4);
+    Point p2(2,7);
+    Point p3(3,5);
+    Circle c = buildCircleFromThreePoints(p1,p2,p3);
+    cout << c.radius << endl << c.center.x << endl << c.center.y << endl ;
 
 }
