@@ -23,6 +23,10 @@ public:
 
 Circle findMinCircle(Point** points,size_t size);
 
-// you can add here additional methods
+Circle buildCircleFromThreePoints(Point &p1, Point &p2, Point &p3);
+
+float distance(Point &p1, Point &p2);
+
+int isPointInCircle(Point &p, Circle c);
 
 #endif /* MINCIRCLE_H_ */

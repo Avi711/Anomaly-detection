@@ -20,6 +20,10 @@ CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o
 CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o
  /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.cpp
  /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o
+ /home/avi/Desktop/Anomaly-detection/anomaly_detection_util.h
+ /home/avi/Desktop/Anomaly-detection/minCircle.cpp
+ /home/avi/Desktop/Anomaly-detection/minCircle.h
 CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o
  /home/avi/Desktop/Anomaly-detection/timeseries.cpp
  /home/avi/Desktop/Anomaly-detection/timeseries.h
