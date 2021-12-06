@@ -25,16 +25,16 @@ Circle minCircleBase(vector<Point> pointvec) {
         return {{pointvec[0].x, pointvec[0].y}, 0};
     if (pointvec.size() == 2)
         return buildCircleFromTwoPoints(pointvec[0], pointvec[1]);
-    for(int i=0;i<3;i++) {
+    for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             Circle c = buildCircleFromTwoPoints(pointvec[i], pointvec[j]);
-            if (isCircleValid(&pointvec[0], c)){
+            if (isCircleValid(pointvec, c)) {
                 return c;
             }
 
         }
     }
-        return buildCircleFromThreePoints(pointvec[0], pointvec[1], pointvec[2]);
+    return buildCircleFromThreePoints(pointvec[0], pointvec[1], pointvec[2]);
 
 }
 
@@ -48,9 +48,6 @@ Circle findMinCircle(Point **points, size_t size) {
     }
     vector<Point> vec2;
     return findMinCircleRec(vec, vec2, vec.size());
-    Point p(5, 7);
-    Circle c(p, 7);
-    return c;
 }
 
 float incline(Point p1, Point p2) {

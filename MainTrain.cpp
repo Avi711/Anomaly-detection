@@ -11,57 +11,61 @@
 #include <thread>
 #include "minCircle.h"
 
-using namespace std;
 
-bool wrong(float val, float expected){
+using namespace std;
+using namespace std::chrono;
+
+bool wrong(float val, float expected) {
     cout << expected << " Your input: " << val << endl;
-    return val<expected-0.001 || val>expected+0.001;
+    return val < expected - 0.001 || val > expected + 0.001;
 }
 
 // this is a simple test to put you on the right track
-void generateTrainCSV(float a1,float b1, float a2, float b2){
+void generateTrainCSV(float a1, float b1, float a2, float b2) {
     ofstream out("trainFile1.csv");
-    out<<"A,B,C,D"<<endl;
-    Line ac(a1,b1);
-    Line bd(a2,b2);
-    for(int i=1;i<=100;i++){
-        float a=i;
-        float b=rand()%40;
-        out<<a<<","<<b<<","<<ac.f(a)-0.02+(rand()%40)/100.0f<<","<<bd.f(b)-0.02+(rand()%40)/100.0f<<endl;
+    out << "A,B,C,D" << endl;
+    Line ac(a1, b1);
+    Line bd(a2, b2);
+    for (int i = 1; i <= 100; i++) {
+        float a = i;
+        float b = rand() % 40;
+        out << a << "," << b << "," << ac.f(a) - 0.02 + (rand() % 40) / 100.0f << ","
+            << bd.f(b) - 0.02 + (rand() % 40) / 100.0f << endl;
     }
     out.close();
 }
 
-void generateTestCSV(float a1,float b1, float a2, float b2, int anomaly){
+void generateTestCSV(float a1, float b1, float a2, float b2, int anomaly) {
     ofstream out("testFile1.csv");
-    out<<"A,B,C,D"<<endl;
-    Line ac(a1,b1);
-    Line bd(a2,b2);
-    for(int i=1;i<=100;i++){
-        float a=i;
-        float b=rand()%40;
-        if(i!=anomaly)
-            out<<a<<","<<b<<","<<ac.f(a)-0.02+(rand()%40)/100.0f<<","<<bd.f(b)-0.02+(rand()%40)/100.0f<<endl;
+    out << "A,B,C,D" << endl;
+    Line ac(a1, b1);
+    Line bd(a2, b2);
+    for (int i = 1; i <= 100; i++) {
+        float a = i;
+        float b = rand() % 40;
+        if (i != anomaly)
+            out << a << "," << b << "," << ac.f(a) - 0.02 + (rand() % 40) / 100.0f << ","
+                << bd.f(b) - 0.02 + (rand() % 40) / 100.0f << endl;
         else
-            out<<a<<","<<b<<","<<ac.f(a)+1<<","<<bd.f(b)-0.02+(rand()%40)/100.0f<<endl;
+            out << a << "," << b << "," << ac.f(a) + 1 << "," << bd.f(b) - 0.02 + (rand() % 40) / 100.0f << endl;
     }
     out.close();
 }
 
-void checkCorrelationTrain(correlatedFeatures c,string f1, string f2, float a, float b){
+void checkCorrelationTrain(correlatedFeatures c, string f1, string f2, float a, float b) {
 
-    if(c.feature1==f1){
-        if(c.feature2!=f2)
-            cout<<"wrong correlated feature of "<<f1<<" (-20)"<<endl;
-        else{
-            if(c.corrlation<0.99)
-                cout<<f1<<"-"<<f2<<" wrong correlation detected (-5)"<<endl;
-            if(c.lin_reg.a<a-0.5f || c.lin_reg.a>a+0.5f)
-                cout<<f1<<"-"<<f2<<" wrong value of line_reg.a (-5)"<<endl;
-            if(c.lin_reg.b<b-0.5f || c.lin_reg.b>b+0.5f)
-                cout<<f1<<"-"<<f2<<" wrong value of line_reg.b (-5)"<<endl;
-            if(c.threshold>0.3)
-                cout<<f1<<"-"<<f2<<" wrong threshold detected (-5)"<<endl;
+    if (c.feature1 == f1) {
+        if (c.feature2 != f2)
+            cout << "wrong correlated feature of " << f1 << " (-20)" << endl;
+        else {
+            if (c.corrlation < 0.99)
+                cout << f1 << "-" << f2 << " wrong correlation detected (-5)" << endl;
+            if (c.lin_reg.a < a - 0.5f || c.lin_reg.a > a + 0.5f)
+                cout << f1 << "-" << f2 << " wrong value of line_reg.a (-5)" << endl;
+            if (c.lin_reg.b < b - 0.5f || c.lin_reg.b > b + 0.5f)
+                cout << f1 << "-" << f2 << " wrong value of line_reg.b (-5)" << endl;
+            if (c.threshold > 0.3)
+                cout << f1 << "-" << f2 << " wrong threshold detected (-5)" << endl;
         }
     }
 
@@ -122,23 +126,89 @@ int test() {
 }
 
 
+Point **generate(Point center, int R, size_t size) {
+    Point **p = new Point *[size];
+    for (size_t i = 0; i < size; i++) {
+        float r = 1 + rand() % R;
+        float a = 3.14159 * (rand() % 360) / 180;
+        float x = center.x + r * cos(a);
+        float y = center.y + r * sin(a);
+        p[i] = new Point(x, y);
+    }
+    return p;
+}
 
 
 // this is a simple test to put you on the right track
-int main(){
+int main() {
 
     //  avi:   /home/avi/Desktop/Anomaly-detection/data.csv
     // kehat:    /home/kehat/CLionProjects/Anomaly-detection/data.csv
-   // int count = 0;
+    // int count = 0;
 
     //for (int i = 0; i < 50; ++i ) {
     //    count = count + test();
     //}
     //cout << "error: " << count << endl;
-    Point p1(1,4);
-    Point p2(2,7);
-    Point p3(3,5);
-    Circle c = buildCircleFromThreePoints(p1,p2,p3);
-    cout << c.radius << endl << c.center.x << endl << c.center.y << endl ;
+
+    // Point p1(1, 4);
+    // Point p2(2, 7);
+    // Point p3(3, 5);
+    // Circle c = buildCircleFromThreePoints(p1, p2, p3);
+    // cout << c.radius << endl << c.center.x << endl << c.center.y << endl;
+
+    srand(time(NULL));
+    const size_t N = 250;
+    float R = 10 + rand() % 1000;
+    float cx = -500 + rand() % 1001;
+    float cy = -500 + rand() % 1001;
+    Point **ps = generate(Point(cx, cy), R, N);
+
+    // your working copy
+    Point **ps_copy = new Point *[N];
+    for (size_t i = 0; i < N; i++)
+        ps_copy[i] = new Point(ps[i]->x, ps[i]->y);
+
+    auto start = high_resolution_clock::now();
+    Circle c = findMinCircle(ps_copy, N);
+    auto stop = high_resolution_clock::now();
+
+    if ((int) c.radius > (int) R)
+        cout << "you need to find a minimal radius (-40)" << endl;
+
+    bool covered = true;
+    for (size_t i = 0; i < N && covered; i++) {
+        float x2 = (c.center.x - ps[i]->x) * (c.center.x - ps[i]->x);
+        float y2 = (c.center.y - ps[i]->y) * (c.center.y - ps[i]->y);
+        float d = sqrt(x2 + y2);
+        if (d > c.radius + 1)
+            covered = false;
+    }
+    if (!covered)
+        cout << "all points should be covered (-45)" << endl;
+
+    auto duration = duration_cast<microseconds>(stop - start);
+    int stime = duration.count();
+    cout << "your time: " << stime << " microseconds" << endl;
+    if (stime > 3000) {
+        cout << "over time limit ";
+        if (stime <= 3500)
+            cout << "(-5)" << endl;
+        else if (stime <= 4000)
+            cout << "(-8)" << endl;
+        else if (stime <= 6000)
+            cout << "(-10)" << endl;
+        else cout << "(-15)" << endl;
+    }
+
+    for (size_t i = 0; i < N; i++) {
+        delete ps[i];
+        delete ps_copy[i];
+    }
+    delete[] ps;
+    delete[] ps_copy;
+
+    cout << "done" << endl;
+    return 0;
 
 }
