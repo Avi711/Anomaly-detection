@@ -4,9 +4,9 @@
 #include "AnomalyDetector.h"
 #include "SimpleAnomalyDetector.h"
 #include <fstream>
-#include <stdlib.h>     /* srand, rand */
-#include <time.h>       /* time */
-#include <math.h>
+#include <cstdlib>     /* srand, rand */
+#include <ctime>       /* time */
+#include <cmath>
 #include <chrono>
 #include <thread>
 #include "minCircle.h"

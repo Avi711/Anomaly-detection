@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o"
-  "/home/kehat/CLionProjects/Anomaly-detection/MainTrain.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o"
-  "/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o"
-  "/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o"
-  "/home/kehat/CLionProjects/Anomaly-detection/minCircle.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o"
-  "/home/kehat/CLionProjects/Anomaly-detection/timeseries.cpp" "/home/kehat/CLionProjects/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o"
+  "/home/avi/Desktop/Anomaly-detection/AnomalyDetector.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o"
+  "/home/avi/Desktop/Anomaly-detection/MainTrain.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o"
+  "/home/avi/Desktop/Anomaly-detection/SimpleAnomalyDetector.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o"
+  "/home/avi/Desktop/Anomaly-detection/anomaly_detection_util.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o"
+  "/home/avi/Desktop/Anomaly-detection/minCircle.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o"
+  "/home/avi/Desktop/Anomaly-detection/timeseries.cpp" "/home/avi/Desktop/Anomaly-detection/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

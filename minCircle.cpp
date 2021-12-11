@@ -5,9 +5,17 @@
 
 #include "minCircle.h"
 #include <cmath>
+#include <chrono>
 
+/**
+ * recursive function for calculating minimal circle when given vector of points.
+ * @param v1 vector of points.
+ * @param v2 array of 1,2 or 3 points for the base cases.
+ * @param size size
+ * @return recursively return minimal circle.
+ */
 
-Circle findMinCircleRec(vector<Point> v1, vector<Point> v2, int size) {
+Circle findMinCircleRec(vector<Point> &v1, vector<Point> v2, int size) {
     if (size == 0 || v2.size() == 3)
         return minCircleBase(v2);
     Point p = v1[size - 1];
@@ -18,49 +26,59 @@ Circle findMinCircleRec(vector<Point> v1, vector<Point> v2, int size) {
     return findMinCircleRec(v1, v2, size - 1);
 }
 
-Circle minCircleBase(vector<Point> pointvec) {
+/**
+ * Base cases for bulding circle from array of point (1,2 or 3 point)
+ * @param pointvec vector of points.
+ * @return Circle built from 1,2 or 3 points.
+ */
+
+Circle minCircleBase(vector<Point> &pointvec) {
     if (pointvec.empty())
         return {{0, 0}, 0};
     if (pointvec.size() == 1)
         return {{pointvec[0].x, pointvec[0].y}, 0};
     if (pointvec.size() == 2)
         return buildCircleFromTwoPoints(pointvec[0], pointvec[1]);
-    for (int i = 0; i < 3; i++) {
+    for(int i=0;i<3;i++) {
         for (int j = 0; j < 3; j++) {
             Circle c = buildCircleFromTwoPoints(pointvec[i], pointvec[j]);
-            if (isCircleValid(pointvec, c)) {
+            if (isCircleValid(pointvec, c)){
                 return c;
             }
-
         }
     }
     return buildCircleFromThreePoints(pointvec[0], pointvec[1], pointvec[2]);
-
 }
 
-/*
- *
+/**
+ * Given array of point builds circle which all the points in the circle.
+ * @param points points.
+ * @param size size of array.
+ * @return minimum circle built when all points in the circle.
  */
 Circle findMinCircle(Point **points, size_t size) {
     vector<Point> vec;
     for (size_t i = 0; i < size; i++) {
         vec.push_back(*points[i]);
     }
-    vector<Point> vec2;
-    return findMinCircleRec(vec, vec2, vec.size());
+    return findMinCircleRec(vec, {}, size);
 }
 
 float incline(Point p1, Point p2) {
     return ((p1.y - p2.y) / (p1.x - p2.x));
 }
 
-/*
- *
+/**
+ * given 3 points, the function builds a circle from them if possible.
+ * @param p1 fist point.
+ * @param p2 second point.
+ * @param p3 third point.
+ * @return circle created from 3 points.
  */
 Circle buildCircleFromThreePoints(Point &p1, Point &p2, Point &p3) {
 
     if (incline(p1, p2) == incline(p2, p3))
-        exit(333333);
+        exit(1);
 
     float incline1 = -(1 / ((p1.y - p2.y) / (p1.x - p2.x))); //line p1 to p2 (AB)
     float incline2 = -(1 / ((p2.y - p3.y) / (p2.x - p3.x))); //line p2 to p3 (BC)
@@ -77,10 +95,16 @@ Circle buildCircleFromThreePoints(Point &p1, Point &p2, Point &p3) {
     float y = line1.f(x);
     Point mid(x, y);
     float r = dist(mid, p1);
-    Circle cirlce(mid, r);
-    return cirlce;
+    Circle circle(mid, r);
+    return circle;
 }
 
+/**
+ * Function building minimum circle when given two points.
+ * @param p1 first point.
+ * @param p2 second point.
+ * @return minimum circle.
+ */
 Circle buildCircleFromTwoPoints(Point &p1, Point &p2) {
 
     Point mid(((p1.x + p2.x) / 2), (p1.y + p2.y) / 2);
@@ -108,11 +132,11 @@ int isPointInCircle(Point &p, Circle c) {
 }
 
 /*
- *
+ * function to check if all the points in given array are witting the radius of a given circle.
  */
 int isCircleValid(vector<Point> &v, Circle c) {
-    for (int i = 0; i < v.size(); i++) {
-        if (!(isPointInCircle(v[i], c)))
+    for (Point & i : v) {
+        if (!(isPointInCircle(i, c)))
             return 0;
     }
     return 1;

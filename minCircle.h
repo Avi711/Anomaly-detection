@@ -24,9 +24,9 @@ public:
 
 Circle findMinCircle(Point** points,size_t size);
 
-Circle minCircleBase(vector<Point> pointvec);
+Circle minCircleBase(vector<Point> &pointvec);
 
-Circle findMinCircleRec(vector <Point> v1 ,vector <Point> v2 , int size  );
+Circle findMinCircleRec(vector <Point> &v1 ,vector <Point> v2 , int size);
 
 Circle buildCircleFromTwoPoints(Point &p1, Point &p2);
 
