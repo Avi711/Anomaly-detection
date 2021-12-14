@@ -36,25 +36,32 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                 c = j;
             }
         }
-            if (c != -1 && fabs(m) > 0.9) {
-                correlatedFeatures cf1;
-                cf1.feature1 = data[i].getName();
-                cf1.feature2 = data[c].getName();
-                cf1.corrlation = fabs(m);
-                cf1.threshold = 0;
-                for (int k = 0; k < data[i].getValues().size(); ++k) {
-                    Point *t = new Point(data[i].getValue(k), data[c].getValue(k));
-                    points.push_back(t);
-                }
-                cf1.lin_reg = linear_reg(&points[0], data[i].getValues().size());
-                for (Point *t : points) {
-                    delete t;
-                }
-                points.clear();
-                this->cf.push_back(cf1);
-            }
+        for (int k = 0; k < data[i].getValues().size(); ++k) {
+            Point *t = new Point(data[i].getValue(k), data[c].getValue(k));
+            points.push_back(t);
+        }
+           learnNoramlHelp(m,c,data[i].getName(),data[c].getName(),points);
+
+        for (Point *t : points) {
+            delete t;
+        }
+        points.clear();
     }
     findMaxDev(ts);
+}
+void SimpleAnomalyDetector::learnNoramlHelp(float m , float c , string str1 , string str2, vector<Point*>&points){
+    if (c != -1 && fabs(m) > 0.9) {
+        correlatedFeatures cf1;
+        cf1.feature1 = str1;
+        cf1.feature2 = str2;
+        cf1.corrlation = fabs(m);
+        cf1.threshold = 0;
+
+        cf1.lin_reg = linear_reg(&points[0], points.size());
+
+        this->cf.push_back(cf1);
+    }
+
 }
 
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {

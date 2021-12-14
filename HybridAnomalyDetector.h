@@ -11,6 +11,7 @@ public:
     HybridAnomalyDetector();
     virtual ~HybridAnomalyDetector();
 
+
 };
 
 #endif /* HYBRIDANOMALYDETECTOR_H_ */

@@ -62,6 +62,7 @@ public:
      * its help us to set the threshold.
      */
     void findMaxDev(const TimeSeries &ts);
+    void learnNoramlHelp(float m , float c , string str1 , string str2, vector<Point*>&points);
 
 };
 
