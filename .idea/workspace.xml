@@ -11,9 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="adding circle class.">
+    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="start min circle problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainTrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainTrain.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o" afterDir="false" />
@@ -28,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
@@ -36,8 +34,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minCircle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/minCircle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minCircle.h" beforeDir="false" afterPath="$PROJECT_DIR$/minCircle.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +52,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="20bRbYPWb5wwYpegWm1TkdVwmxh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -80,6 +73,11 @@
     <configuration name="Anomaly_detection" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Anomaly_detection" TARGET_NAME="Anomaly_detection" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Anomaly_detection" RUN_TARGET_NAME="Anomaly_detection">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -105,8 +103,10 @@
       <workItem from="1637166261165" duration="5209000" />
       <workItem from="1637187773672" duration="4285000" />
       <workItem from="1637252963459" duration="3000" />
-      <workItem from="1638874457295" duration="613000" />
-      <workItem from="1639253961921" duration="2404000" />
+      <workItem from="1638189329238" duration="8000" />
+      <workItem from="1638711110283" duration="599000" />
+      <workItem from="1638815995151" duration="2083000" />
+      <workItem from="1639504601332" duration="404000" />
     </task>
     <task id="LOCAL-00001" summary="Disabling timeseries.h">
       <created>1636311712111</created>
@@ -241,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637192024315</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="start min circle problem">
+      <created>1637538237278</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1637538237278</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +264,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Disabling timeseries.h" />
@@ -266,6 +274,7 @@
     <MESSAGE value="Threshold 1.2" />
     <MESSAGE value="Threshold 1.25" />
     <MESSAGE value="Threshold 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Threshold 1.1" />
+    <MESSAGE value="start min circle problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="start min circle problem" />
   </component>
 </project>
