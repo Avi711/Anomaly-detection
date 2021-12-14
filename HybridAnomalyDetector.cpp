@@ -19,8 +19,8 @@ void HybridAnomalyDetector::learnNormalHelp(float m , string str1 , string str2,
 }
 
 bool HybridAnomalyDetector::isAnomaly(Point p, correlatedFeatures cf) {
-    Circle c(Point(cf.dx,cf.dy),cf.corrlation);
+    Circle c(Point(cf.dx,cf.dy),cf.threshold);
     bool simple = (cf.corrlation > 0.9) && SimpleAnomalyDetector::isAnomaly(p,cf);
-    bool circle = (cf.corrlation > 0.5) && cf.corrlation < 0.9 && isPointInCircle(p,c);
+    bool circle = (cf.corrlation > 0.5) && cf.corrlation < 0.9 && !isPointInCircle(p,c);
     return simple || circle;
 }
