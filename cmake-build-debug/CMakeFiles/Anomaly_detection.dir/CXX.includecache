@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.cpp
-AnomalyDetector.h
-/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.h
-
 /home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.h
 string
 -
@@ -20,15 +16,19 @@ timeseries.h
 math.h
 /home/kehat/CLionProjects/Anomaly-detection/math.h
 
+/home/kehat/CLionProjects/Anomaly-detection/HybridAnomalyDetector.h
+SimpleAnomalyDetector.h
+/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.h
+minCircle.h
+/home/kehat/CLionProjects/Anomaly-detection/minCircle.h
+
 /home/kehat/CLionProjects/Anomaly-detection/MainTrain.cpp
 iostream
 -
 vector
 -
-AnomalyDetector.h
-/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.h
-SimpleAnomalyDetector.h
-/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.h
+HybridAnomalyDetector.h
+/home/kehat/CLionProjects/Anomaly-detection/HybridAnomalyDetector.h
 fstream
 -
 stdlib.h
@@ -37,16 +37,6 @@ time.h
 -
 math.h
 -
-chrono
--
-thread
--
-minCircle.h
-/home/kehat/CLionProjects/Anomaly-detection/minCircle.h
-
-/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-/home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.h
 
 /home/kehat/CLionProjects/Anomaly-detection/SimpleAnomalyDetector.h
 anomaly_detection_util.h
@@ -62,19 +52,7 @@ string.h
 math.h
 -
 
-/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.cpp
-math.h
--
-anomaly_detection_util.h
 /home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
-
-/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
-
-/home/kehat/CLionProjects/Anomaly-detection/minCircle.cpp
-minCircle.h
-/home/kehat/CLionProjects/Anomaly-detection/minCircle.h
-cmath
--
 
 /home/kehat/CLionProjects/Anomaly-detection/minCircle.h
 iostream
@@ -87,12 +65,6 @@ time.h
 -
 anomaly_detection_util.h
 /home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h
-
-/home/kehat/CLionProjects/Anomaly-detection/timeseries.cpp
-timeseries.h
-/home/kehat/CLionProjects/Anomaly-detection/timeseries.h
-math.h
-/home/kehat/CLionProjects/Anomaly-detection/math.h
 
 /home/kehat/CLionProjects/Anomaly-detection/timeseries.h
 string

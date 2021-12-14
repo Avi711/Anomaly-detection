@@ -7,6 +7,7 @@ CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o: \
  ../timeseries.h
 CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o: \
  ../AnomalyDetector.h \
+ ../HybridAnomalyDetector.h \
  ../MainTrain.cpp \
  ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \
