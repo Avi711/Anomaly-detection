@@ -36,21 +36,23 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
                 c = j;
             }
         }
-        for (int k = 0; k < data[i].getValues().size(); ++k) {
-            Point *t = new Point(data[i].getValue(k), data[c].getValue(k));
-            points.push_back(t);
-        }
-           learnNoramlHelp(m,c,data[i].getName(),data[c].getName(),points);
+        if (c != -1) {
+            for (int k = 0; k < data[i].getValues().size(); ++k) {
+                Point *t = new Point(data[i].getValue(k), data[c].getValue(k));
+                points.push_back(t);
+            }
+            learnNoramlHelp(m, data[i].getName(), data[c].getName(), points);
 
-        for (Point *t : points) {
-            delete t;
+            for (Point *t: points) {
+                delete t;
+            }
         }
         points.clear();
     }
     findMaxDev(ts);
 }
-void SimpleAnomalyDetector::learnNoramlHelp(float m , float c , string str1 , string str2, vector<Point*>&points){
-    if (c != -1 && fabs(m) > 0.9) {
+void SimpleAnomalyDetector::learnNoramlHelp(float m , string str1 , string str2, vector<Point*>&points){
+    if (fabs(m) > 0.9) {
         correlatedFeatures cf1;
         cf1.feature1 = str1;
         cf1.feature2 = str2;
