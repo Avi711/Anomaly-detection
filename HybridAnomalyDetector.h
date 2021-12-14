@@ -11,7 +11,10 @@ public:
     HybridAnomalyDetector();
     virtual ~HybridAnomalyDetector();
 
-    virtual void learnNoramlHelp(float m , string str1 , string str2, vector<Point*>&points);
+    virtual void learnNormalHelp(float m , string str1 , string str2, vector<Point*>&points);
+
+    virtual bool isAnomaly(Point p, correlatedFeatures cf);
+
 };
 
 

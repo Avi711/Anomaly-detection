@@ -9,6 +9,7 @@
 
 #include "anomaly_detection_util.h"
 #include "AnomalyDetector.h"
+#include "minCircle.h"
 #include <vector>
 #include <algorithm>
 #include <string.h>
@@ -24,7 +25,7 @@ struct correlatedFeatures {
     float corrlation;
     Line lin_reg;
     float threshold;
-
+    float dx,dy;
 };
 
 /*
@@ -33,6 +34,7 @@ struct correlatedFeatures {
  * and functions to create and run our Simple Anomaly Detector
  */
 class SimpleAnomalyDetector : public TimeSeriesAnomalyDetector {
+protected:
     vector<correlatedFeatures> cf;
 public:
     //constructor
@@ -51,6 +53,11 @@ public:
      */
     virtual vector<AnomalyReport> detect(const TimeSeries &ts);
 
+    /**
+     * help function to determine whether there is an anomaly.
+     * @return true if there is anomaly false otherwise.
+     */
+    virtual bool isAnomaly(Point p, correlatedFeatures cf);
     /*For the testability of the department. In this method we return
      * List of correlative properties as described in the code. Thus, we can check that learning is normal
      */
@@ -63,7 +70,7 @@ public:
      * its help us to set the threshold.
      */
     void findMaxDev(const TimeSeries &ts);
-    virtual void learnNoramlHelp(float m , string str1 , string str2, vector<Point*>&points);
+    virtual void learnNormalHelp(float m , string str1 , string str2, vector<Point*>&points);
 
 };
 
