@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="Anomaly_detection" targetName="Anomaly_detection" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -11,7 +9,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="adding" />
+    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="adding">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HybridAnomalyDetector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HybridAnomalyDetector.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,10 +26,17 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3" />
   </component>
   <component name="ProjectId" id="20bRbYPWb5wwYpegWm1TkdVwmxh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -89,6 +97,8 @@
       <workItem from="1638711110283" duration="599000" />
       <workItem from="1638815995151" duration="2083000" />
       <workItem from="1639504601332" duration="640000" />
+      <workItem from="1639506161007" duration="105000" />
+      <workItem from="1639506291711" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="Disabling timeseries.h">
       <created>1636311712111</created>
@@ -251,7 +261,28 @@
       <option name="project" value="LOCAL" />
       <updated>1639505769369</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adding">
+      <created>1639505814504</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1639505814504</updated>
+    </task>
+    <task id="LOCAL-00025" summary="adding">
+      <created>1639505852960</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1639505852960</updated>
+    </task>
+    <task id="LOCAL-00026" summary="adding">
+      <created>1639506006915</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1639506006915</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

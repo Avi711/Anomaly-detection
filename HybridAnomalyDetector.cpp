@@ -8,7 +8,6 @@ HybridAnomalyDetector::HybridAnomalyDetector() {
 
 HybridAnomalyDetector::~HybridAnomalyDetector() {
     int x =5;
-
     return;
 }
 
