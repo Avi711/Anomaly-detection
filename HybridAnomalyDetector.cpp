@@ -13,7 +13,7 @@ void HybridAnomalyDetector::learnNormalHelp(float m , string str1 , string str2,
         cf1.feature1 = str1;
         cf1.feature2 = str2;
         cf1.corrlation = fabs(m);
-        cf1.threshold = c.radius * 1.15;
+        cf1.threshold = c.radius * 1.1;
         this->cf.push_back(cf1);
     }
 }
