@@ -24,6 +24,7 @@ struct correlatedFeatures {
     float corrlation;
     Line lin_reg;
     float threshold;
+
 };
 
 /*
@@ -62,7 +63,7 @@ public:
      * its help us to set the threshold.
      */
     void findMaxDev(const TimeSeries &ts);
-    void learnNoramlHelp(float m , string str1 , string str2, vector<Point*>&points);
+    virtual void learnNoramlHelp(float m , string str1 , string str2, vector<Point*>&points);
 
 };
 
