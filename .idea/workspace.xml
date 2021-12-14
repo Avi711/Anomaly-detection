@@ -11,14 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="ex4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/depend.make" afterDir="false" />
-    </list>
+    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="adding" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639505169953</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="adding (sending to the recursive function by reference for better fun time)">
+      <created>1639505705282</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1639505705282</updated>
+    </task>
+    <task id="LOCAL-00023" summary="adding">
+      <created>1639505769368</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1639505769369</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +267,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Disabling timeseries.h" />
@@ -272,6 +278,8 @@
     <MESSAGE value="Threshold 1.1" />
     <MESSAGE value="start min circle problem" />
     <MESSAGE value="ex4" />
-    <option name="LAST_COMMIT_MESSAGE" value="ex4" />
+    <MESSAGE value="adding (sending to the recursive function by reference for better fun time)" />
+    <MESSAGE value="adding" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding" />
   </component>
 </project>
