@@ -25,7 +25,8 @@ struct correlatedFeatures {
     float corrlation;
     Line lin_reg;
     float threshold;
-    float dx,dy;
+    // default
+    Circle c = Circle(Point(0,0),0);
 };
 
 /*

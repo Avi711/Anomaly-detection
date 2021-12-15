@@ -52,14 +52,14 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
    // findMaxDev(ts);
 }
 void SimpleAnomalyDetector::learnNormalHelp(float m , string str1 , string str2, vector<Point*>&points){
-    if (fabs(m) > 0.9) {
+    if (fabs(m) >= 0.9) {
         correlatedFeatures cf1;
         cf1.feature1 = str1;
         cf1.feature2 = str2;
         cf1.corrlation = fabs(m);
         cf1.threshold = 0;
         cf1.lin_reg = linear_reg(&points[0], points.size());
-        cf1.threshold = findThreshhold(points, cf1.lin_reg) * 1.15;
+        cf1.threshold = findThreshhold(points, cf1.lin_reg) * 1.1;
         this->cf.push_back(cf1);
     }
 }
