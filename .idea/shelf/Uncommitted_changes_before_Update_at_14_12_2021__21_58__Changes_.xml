@@ -1,0 +1,49 @@
+<changelist name="Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]" date="1639511930679" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 14/12/2021, 21:58 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/minCircle.cpp.o" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/Anomaly_detection" />
+    <option name="AFTER_PATH" value="cmake-build-debug/Anomaly_detection" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/Anomaly_detection" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/.ninja_deps" />
+    <option name="AFTER_PATH" value="cmake-build-debug/.ninja_deps" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/.ninja_deps" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/timeseries.cpp.o" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/MainTrain.cpp.o" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/SimpleAnomalyDetector.cpp.o" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/HybridAnomalyDetector.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/HybridAnomalyDetector.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/HybridAnomalyDetector.cpp.o" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/anomaly_detection_util.cpp.o" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_12_2021,_21_58_[Changes]/AnomalyDetector.cpp.o" />
+  </binary>
+</changelist>
