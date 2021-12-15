@@ -69,7 +69,9 @@ public:
      * find the max deviation between point and the line equation of the points
      * its help us to set the threshold.
      */
-    void findMaxDev(const TimeSeries &ts);
+    virtual void findMaxDev(const TimeSeries &ts);
+
+    virtual float findThreshhold(vector<Point*>&points, Line l);
     virtual void learnNormalHelp(float m , string str1 , string str2, vector<Point*>&points);
 
 };
