@@ -155,5 +155,9 @@ int main(){
         cout<<"you have "<<falseAlarms<<" false alarms (-"<<min(30,falseAlarms*3)<<")"<<endl;
 
     cout<<"done"<<endl;
+
+
+
+
     return 0;
 }
