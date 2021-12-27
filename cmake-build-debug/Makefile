@@ -153,6 +153,30 @@ AnomalyDetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.s
 .PHONY : AnomalyDetector.cpp.s
 
+CLI.o: CLI.cpp.o
+.PHONY : CLI.o
+
+# target to build an object file
+CLI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/CLI.cpp.o
+.PHONY : CLI.cpp.o
+
+CLI.i: CLI.cpp.i
+.PHONY : CLI.i
+
+# target to preprocess a source file
+CLI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/CLI.cpp.i
+.PHONY : CLI.cpp.i
+
+CLI.s: CLI.cpp.s
+.PHONY : CLI.s
+
+# target to generate assembly for a file
+CLI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Anomaly_detection.dir/build.make CMakeFiles/Anomaly_detection.dir/CLI.cpp.s
+.PHONY : CLI.cpp.s
+
 HybridAnomalyDetector.o: HybridAnomalyDetector.cpp.o
 .PHONY : HybridAnomalyDetector.o
 
@@ -309,6 +333,9 @@ help:
 	@echo "... AnomalyDetector.o"
 	@echo "... AnomalyDetector.i"
 	@echo "... AnomalyDetector.s"
+	@echo "... CLI.o"
+	@echo "... CLI.i"
+	@echo "... CLI.s"
 	@echo "... HybridAnomalyDetector.o"
 	@echo "... HybridAnomalyDetector.i"
 	@echo "... HybridAnomalyDetector.s"

@@ -26,7 +26,7 @@ struct correlatedFeatures {
     Line lin_reg;
     float threshold;
     // default
-    Circle c = Circle(Point(0,0),0);
+    Circle c = Circle(Point(0, 0), 0);
 };
 
 /*
@@ -37,12 +37,15 @@ struct correlatedFeatures {
 class SimpleAnomalyDetector : public TimeSeriesAnomalyDetector {
 protected:
     vector<correlatedFeatures> cf;
+    float current_correlation;
 public:
     //constructor
     SimpleAnomalyDetector();
 
     //distructor
     virtual ~SimpleAnomalyDetector();
+
+    void setCurrentCorrealtion(float cor);
 
     /*
      * Here we find the correlative pairs (columns of time series)
@@ -59,6 +62,7 @@ public:
      * @return true if there is anomaly false otherwise.
      */
     virtual bool isAnomaly(Point p, correlatedFeatures cf);
+
     /*For the testability of the department. In this method we return
      * List of correlative properties as described in the code. Thus, we can check that learning is normal
      */
@@ -72,8 +76,9 @@ public:
      */
     virtual void findMaxDev(const TimeSeries &ts);
 
-    virtual float findThreshhold(vector<Point*>&points, Line l);
-    virtual void learnNormalHelp(float m , string str1 , string str2, vector<Point*>&points);
+    virtual float findThreshhold(vector<Point *> &points, Line l);
+
+    virtual void learnNormalHelp(float m, string str1, string str2, vector<Point *> &points);
 
 };
 

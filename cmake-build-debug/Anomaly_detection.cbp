@@ -90,6 +90,12 @@
 		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/AnomalyDetector.h">
 			<Option target="Anomaly_detection"/>
 		</Unit>
+		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/CLI.cpp">
+			<Option target="Anomaly_detection"/>
+		</Unit>
+		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/CLI.h">
+			<Option target="Anomaly_detection"/>
+		</Unit>
 		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/HybridAnomalyDetector.cpp">
 			<Option target="Anomaly_detection"/>
 		</Unit>
@@ -109,6 +115,9 @@
 			<Option target="Anomaly_detection"/>
 		</Unit>
 		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/anomaly_detection_util.h">
+			<Option target="Anomaly_detection"/>
+		</Unit>
+		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/commands.h">
 			<Option target="Anomaly_detection"/>
 		</Unit>
 		<Unit filename="/home/kehat/CLionProjects/Anomaly-detection/minCircle.cpp">

@@ -7,7 +7,7 @@ HybridAnomalyDetector::~HybridAnomalyDetector() {}
 
 void HybridAnomalyDetector::learnNormalHelp(float m , string str1 , string str2, vector<Point*>&points){
     SimpleAnomalyDetector::learnNormalHelp(m,str1,str2,points);
-    if (fabs(m) > 0.5 && fabs(m) < 0.9) {
+    if (fabs(m) > 0.5 && fabs(m) < current_correlation) {
         correlatedFeatures cf1;
         cf1.c = findMinCircle(&points[0],points.size());
         cf1.feature1 = str1;
@@ -20,7 +20,7 @@ void HybridAnomalyDetector::learnNormalHelp(float m , string str1 , string str2,
 
 bool HybridAnomalyDetector::isAnomaly(Point p, correlatedFeatures cf) {
     Point p1 = cf.c.center;
-    bool simple = (cf.corrlation >= 0.9) && SimpleAnomalyDetector::isAnomaly(p,cf);
-    bool circle = (cf.corrlation > 0.5) && (cf.corrlation < 0.9) && dist(p1,p) > cf.threshold;
+    bool simple = (cf.corrlation >= current_correlation) && SimpleAnomalyDetector::isAnomaly(p,cf);
+    bool circle = (cf.corrlation > 0.5) && (cf.corrlation < current_correlation) && dist(p1,p) > cf.threshold;
     return (simple || circle);
 }
