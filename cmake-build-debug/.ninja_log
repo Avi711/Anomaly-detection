@@ -9,3 +9,13 @@
 2	1061	1640696099924831910	CMakeFiles/Anomaly_detection.dir/CLI.cpp.o	55c44603cfde0ef4
 324	1251	1640639861946016371	CMakeFiles/Anomaly_detection.dir/HybridAnomalyDetector.cpp.o	eb593c2aa41d79fd
 2	1187	1640639861878015868	CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o	bebac1c74dedc3d8
+2	285	1640701070333207427	CMakeFiles/Anomaly_detection.dir/Server.cpp.o	7fbbd80e60ea2cbd
+2	547	1640701070593209663	CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o	567f7ab63759b85d
+2	732	1640701070777211246	CMakeFiles/Anomaly_detection.dir/CLI.cpp.o	55c44603cfde0ef4
+732	825	1640701070873212071	Anomaly_detection	78080c4e870a5bd2
+2	724	1640703063151462512	CMakeFiles/Anomaly_detection.dir/CLI.cpp.o	55c44603cfde0ef4
+724	818	1640703063243462334	Anomaly_detection	78080c4e870a5bd2
+2	720	1640703123007373213	CMakeFiles/Anomaly_detection.dir/CLI.cpp.o	55c44603cfde0ef4
+721	812	1640703123099373119	Anomaly_detection	78080c4e870a5bd2
+1	731	1640703139059358201	CMakeFiles/Anomaly_detection.dir/CLI.cpp.o	55c44603cfde0ef4
+732	824	1640703139151358126	Anomaly_detection	78080c4e870a5bd2

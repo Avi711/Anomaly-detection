@@ -40,4 +40,7 @@ void CLI::start(){
 
 
 CLI::~CLI() {
+    for (Command* command : this->commands) {
+        delete(command);
+    }
 }

@@ -11,18 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="adding">
-      <change afterPath="$PROJECT_DIR$/Server.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.h" afterDir="false" />
+    <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="ex6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CLI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CLI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLI.h" beforeDir="false" afterPath="$PROJECT_DIR$/CLI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +113,7 @@
       <workItem from="1639599743603" duration="4448000" />
       <workItem from="1639604463784" duration="22000" />
       <workItem from="1640627577860" duration="760000" />
-      <workItem from="1640686054406" duration="11465000" />
+      <workItem from="1640686054406" duration="13739000" />
     </task>
     <task id="LOCAL-00001" summary="Disabling timeseries.h">
       <created>1636311712111</created>
@@ -343,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640696122894</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="ex6">
+      <created>1640701059744</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1640701059744</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,20 +375,16 @@
     <MESSAGE value="ex4" />
     <MESSAGE value="adding (sending to the recursive function by reference for better fun time)" />
     <MESSAGE value="adding" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding" />
+    <MESSAGE value="ex6" />
+    <option name="LAST_COMMIT_MESSAGE" value="ex6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/MainTrain.cpp</url>
-          <line>77</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/commands.h</url>
-          <line>214</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/CLI.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
