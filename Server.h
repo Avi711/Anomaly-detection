@@ -8,6 +8,23 @@
 
 
 #include <thread>
+#include <netinet/in.h>
+#include "sys/socket.h"
+#include "CLI.h"
+#include<signal.h>
+
+
+
+#include <pthread.h>
+#include <thread>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include<signal.h>
+#include <sstream>
+
 
 using namespace std;
 
@@ -17,15 +34,30 @@ public:
     virtual void handle(int clientID)=0;
 };
 
+class SocketIO : public DefaultIO{
+public:
+    int sock;
+    virtual string read();
 
+    virtual void write(string text);
+
+    virtual void write(float f);
+
+    virtual void read(float *f);
+};
 // you can add helper classes here and implement on the cpp file
 
 
 // edit your AnomalyDetectionHandler class here
 class AnomalyDetectionHandler:public ClientHandler{
 public:
+    SocketIO io;
+    int sock;
     virtual void handle(int clientID){
-
+        io.sock = clientID;
+        this->sock = clientID;
+        CLI cli(&io);
+        cli.start();
     }
 };
 
@@ -33,6 +65,11 @@ public:
 // implement on Server.cpp
 class Server {
     thread* t; // the thread to run the start() method in
+    int serverPort;
+    bool running;
+    int sock;
+    sockaddr_in hint;
+    sockaddr_in hint2;
 
     // you may add data members
 

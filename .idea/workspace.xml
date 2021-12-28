@@ -13,7 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6657a57a-3688-4171-ac81-23833c41b4de" name="Changes" comment="ex6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CLI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainTrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainTrain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.h" beforeDir="false" afterPath="$PROJECT_DIR$/Server.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Anomaly_detection" afterDir="false" />
@@ -113,7 +115,7 @@
       <workItem from="1639599743603" duration="4448000" />
       <workItem from="1639604463784" duration="22000" />
       <workItem from="1640627577860" duration="760000" />
-      <workItem from="1640686054406" duration="13739000" />
+      <workItem from="1640686054406" duration="21726000" />
     </task>
     <task id="LOCAL-00001" summary="Disabling timeseries.h">
       <created>1636311712111</created>
@@ -346,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640701059744</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="ex6">
+      <created>1640721894545</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1640721894545</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,9 +391,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/CLI.cpp</url>
-          <line>42</line>
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/CLI.h</url>
+          <line>8</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
