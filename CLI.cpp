@@ -1,3 +1,9 @@
+//
+// Created by Avraham Sikirov - 318731478
+// Created by Kehat Sudri - 318409745
+//
+
+
 #include "CLI.h"
 #define DEFAULT_CORRELATION 0.9
 CLI::CLI(DefaultIO* dio) {

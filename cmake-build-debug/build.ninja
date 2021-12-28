@@ -128,6 +128,13 @@ build CMakeFiles/Anomaly_detection.dir/CLI.cpp.o: CXX_COMPILER__Anomaly_detectio
   OBJECT_DIR = CMakeFiles/Anomaly_detection.dir
   OBJECT_FILE_DIR = CMakeFiles/Anomaly_detection.dir
 
+build CMakeFiles/Anomaly_detection.dir/Server.cpp.o: CXX_COMPILER__Anomaly_detection_Debug /home/avi/Desktop/Anomaly-detection/Server.cpp || cmake_object_order_depends_target_Anomaly_detection
+  DEP_FILE = CMakeFiles/Anomaly_detection.dir/Server.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/avi/Desktop/Anomaly-detection/.
+  OBJECT_DIR = CMakeFiles/Anomaly_detection.dir
+  OBJECT_FILE_DIR = CMakeFiles/Anomaly_detection.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Anomaly_detection
@@ -136,7 +143,7 @@ build CMakeFiles/Anomaly_detection.dir/CLI.cpp.o: CXX_COMPILER__Anomaly_detectio
 #############################################
 # Link the executable Anomaly_detection
 
-build Anomaly_detection: CXX_EXECUTABLE_LINKER__Anomaly_detection_Debug CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o CMakeFiles/Anomaly_detection.dir/HybridAnomalyDetector.cpp.o CMakeFiles/Anomaly_detection.dir/CLI.cpp.o
+build Anomaly_detection: CXX_EXECUTABLE_LINKER__Anomaly_detection_Debug CMakeFiles/Anomaly_detection.dir/anomaly_detection_util.cpp.o CMakeFiles/Anomaly_detection.dir/MainTrain.cpp.o CMakeFiles/Anomaly_detection.dir/AnomalyDetector.cpp.o CMakeFiles/Anomaly_detection.dir/SimpleAnomalyDetector.cpp.o CMakeFiles/Anomaly_detection.dir/timeseries.cpp.o CMakeFiles/Anomaly_detection.dir/minCircle.cpp.o CMakeFiles/Anomaly_detection.dir/HybridAnomalyDetector.cpp.o CMakeFiles/Anomaly_detection.dir/CLI.cpp.o CMakeFiles/Anomaly_detection.dir/Server.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Anomaly_detection.dir
   POST_BUILD = :
