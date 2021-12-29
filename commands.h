@@ -89,17 +89,20 @@ public:
         string line = dio->read();
         ofstream outTrain("trainFile.csv");
         while (line != "done") {
+            if (line == "done\n")
+                break;
             outTrain << line << endl;
             lines = lines + 1;
             line = dio->read();
         }
         info.lines = lines;
         dio->write("Upload complete.\n");
-
         dio->write("Please upload your local test CSV file.\n");
         string line1 = dio->read();
         ofstream outTest("testFile.csv");
         while (line1 != "done") {
+            if (line1 == "done\n")
+                break;
             outTest << line1 << endl;
             line1 = dio->read();
         }
@@ -192,11 +195,13 @@ public:
     virtual void execute(Information &info) {
         vector<Anomaly> userAnomalies;
         vector<Anomaly> serverAnomalies;
-        string line = dio->read();
         dio->write("Please upload your local anomalies file.\n");
+        string line = dio->read();
         int userAnomalyRange = 0, FP = 0, TP =0;
 
         while (line != "done") {
+            if (line == "done\n")
+                break;
             string  delim = ",";
             string token1 = line.substr(0, line.find((delim)));
             string token2 = line.substr(line.find(delim) + 1, line.size());

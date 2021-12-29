@@ -5,23 +5,27 @@
 
 
 #include "Server.h"
+#define BYTE 1
 
 string SocketIO::read() {
-    char buf[4096];
-    recv(sock,buf, 4096,0);
-    string s = "";
-    for (int i = 0; i < 4096; i++) {
-        s = s + buf[i];
+    char buf = ' ';
+    string input = "";
+    while (buf != '\n') {
+        recv(sockIO,&buf, BYTE,0);
+        input = input + buf;
     }
-    return s;
+    return input;
 }
 
 void SocketIO::write(string text) {
-    send(sock,text.c_str(),text.size() + 1,0);
+    send(sockIO,text.c_str(),text.size(),0);
 }
 
 void SocketIO::write(float f) {
-
+    std::ostringstream ss;
+    ss << f;
+    std::string s(ss.str());
+    write(s);
 }
 
 void SocketIO::read(float *f) {
@@ -50,6 +54,20 @@ Server::Server(int port)throw (const char*) {
 }
 
 void Server::start(ClientHandler& ch)throw(const char*){
+    t=new thread([&ch,this](){
+        while(running){
+            socklen_t clientSize=sizeof(hint2);
+            alarm(1);
+            int clientSock = accept(sock,(struct sockaddr*)&hint2,&clientSize);
+            if(clientSock>0){
+                ch.handle(clientSock);
+                close(clientSock);
+            }
+            alarm(0);
+
+        }
+        close(sock);
+    });
 
 }
 void Server::stop(){

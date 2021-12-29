@@ -31,7 +31,7 @@ void CLI::start(){
     input = dio->read();
     Information info;
     info.correlation = DEFAULT_CORRELATION;
-    while(input != "6") {
+    while(input[0] != '6') {
         commands[std::stoi(input) - 1]->execute(info);
         printMenu();
         input = dio->read();

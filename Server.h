@@ -36,7 +36,7 @@ public:
 
 class SocketIO : public DefaultIO{
 public:
-    int sock;
+    int sockIO;
     virtual string read();
 
     virtual void write(string text);
@@ -52,10 +52,8 @@ public:
 class AnomalyDetectionHandler:public ClientHandler{
 public:
     SocketIO io;
-    int sock;
     virtual void handle(int clientID){
-        io.sock = clientID;
-        this->sock = clientID;
+        io.sockIO = clientID;
         CLI cli(&io);
         cli.start();
     }

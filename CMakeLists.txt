@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(.)
 
 set(Headers anomaly_detection_util.h AnomalyDetector.h SimpleAnomalyDetector.h timeseries.h)
-
+SET(CMAKE_CXX_FLAGS -pthread)
 add_executable(Anomaly_detection
         anomaly_detection_util.cpp
         anomaly_detection_util.h
